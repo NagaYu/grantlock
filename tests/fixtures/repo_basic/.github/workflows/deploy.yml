@@ -1,0 +1,37 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-aws:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::123456789012:role/gha-deploy
+          aws-region: us-east-1
+      - run: ./scripts/deploy.sh
+
+  deploy-gcp:
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.example.com
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
+          service_account: deployer@example-project.iam.gserviceaccount.com
+      - run: gcloud run deploy api

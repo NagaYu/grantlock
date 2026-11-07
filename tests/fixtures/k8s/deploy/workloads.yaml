@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent
+  namespace: agents
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: agent}
+  template:
+    metadata:
+      labels: {app: agent}
+    spec:
+      serviceAccountName: agent
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: agent
+          image: ghcr.io/acme/agent:2.1.0
+          env:
+            - name: LOG_LEVEL
+              value: info
+            - name: GITHUB_TOKEN
+              value: ghp_FAKEk8sLiteral00000000000000000000
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app-keys
+                  key: OPENAI_API_KEY
+          envFrom:
+            - secretRef:
+                name: app-keys
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: nightly-report
+  namespace: agents
+spec:
+  schedule: "0 3 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: reporter
+          restartPolicy: OnFailure
+          containers:
+            - name: report
+              image: ghcr.io/acme/reporter:1.0.0
+              env:
+                - name: AWS_ACCESS_KEY_ID
+                  valueFrom:
+                    secretKeyRef: {name: aws-static, key: AWS_ACCESS_KEY_ID}
+                - name: AWS_SECRET_ACCESS_KEY
+                  valueFrom:
+                    secretKeyRef: {name: aws-static, key: AWS_SECRET_ACCESS_KEY}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-shell
+  namespace: agents
+spec:
+  containers:
+    - name: sh
+      image: busybox:1.36
+      volumeMounts: [{name: keys, mountPath: /keys}]
+  volumes:
+    - name: keys
+      secret:
+        secretName: app-keys
+        items:
+          - key: ANTHROPIC_API_KEY
+            path: anthropic

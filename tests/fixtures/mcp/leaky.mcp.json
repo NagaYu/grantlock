@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "openai-tools": {
+      "command": "uvx",
+      "args": ["openai-mcp-tools"],
+      "env": { "OPENAI_API_KEY": "sk-FAKEleak0000000000000000000000" }
+    },
+    "github-remote": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer ghp_FAKEleak000000000000000000000000000" }
+    },
+    "prod-db": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres",
+               "postgresql://admin:FAKEpasswordLeak99@db.prod.internal:5432/app"]
+    },
+    "claude-proxy": {
+      "command": "node",
+      "args": ["./tools/proxy.js", "--api-key", "sk-ant-FAKEleak000000000000000"]
+    },
+    "search": {
+      "type": "sse",
+      "url": "https://search.example.com/sse?api_key=FAKEqueryLeak123456"
+    },
+    "crm": {
+      "type": "http",
+      "url": "https://mcp.hubspot.example/mcp",
+      "oauth": { "clientId": "public-client", "clientSecret": "FAKEclientSecretLeak42", "scopes": ["crm.objects.read"] }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+name: Bug report
+description: File a bug
+body:
+  - type: textarea
+    id: what

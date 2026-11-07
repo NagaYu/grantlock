@@ -1,0 +1,26 @@
+{
+  // VS Code style: JSONC with inputs
+  "inputs": [
+    { "type": "promptString", "id": "github_token", "description": "GitHub PAT", "password": true }
+  ],
+  "servers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer ${input:github_token}" },
+    },
+    /* remote server using delegated OAuth */
+    "linear": { "type": "http", "url": "https://mcp.linear.app/mcp" },
+    "snowflake": {
+      "command": "uvx",
+      "args": ["snowflake-labs-mcp", "--toolsets", "all"],
+      "env": { "SNOWFLAKE_ROLE": "ACCOUNTADMIN", "SNOWFLAKE_PASSWORD": "${SNOWFLAKE_PASSWORD}" }
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "oauth": { "scopes": "channels:read chat:write" },
+      "env": { "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}" }
+    },
+  }
+}

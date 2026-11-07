@@ -1,0 +1,48 @@
+# Agent stack for local development
+services:
+  agent:
+    image: ghcr.io/acme/support-agent:1.4.2
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-sk-proj-FAKEdefault0000000000000000000000T3BlbkFJ000000000000000000000000}
+      DATABASE_URL: postgres://agent:${PG_PASSWORD}@db:5432/agent
+      LOG_LEVEL: info
+      PORT: 8080
+      GITHUB_TOKEN:
+    env_file:
+      - ./config/shared.env
+    secrets:
+      - slack_bot_token
+  worker:
+    image: ghcr.io/acme/support-agent:1.4.2
+    environment:
+      - QUEUE_URL=redis://redis:6379/0
+      - STRIPE_SECRET_KEY=sk_live_FAKEcomposeLeak00000000000000
+      - SENTRY_DSN
+    env_file: config/shared.env
+    build:
+      context: .
+      args:
+        NPM_TOKEN: npm_FAKEbuildArgLeak00000000000000000000
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
+      POSTGRES_URL_ADMIN: postgres://admin:FAKEcomposePw99@db.prod.internal:5432/app
+    secrets:
+      - source: pg_password
+        target: pg_password
+  mcp-gateway:
+    image: ghcr.io/acme/mcp-gateway:0.9
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      CACHE_DIR: /var/cache/gateway
+
+secrets:
+  slack_bot_token:
+    environment: SLACK_BOT_TOKEN
+  pg_password:
+    file: ./secrets/pg_password.txt
+  unused_legacy_token:
+    external: true

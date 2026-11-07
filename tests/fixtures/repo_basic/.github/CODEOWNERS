@@ -1,0 +1,5 @@
+# Ownership for agent credentials
+/.github/                 @acme/platform
+/.mcp.json                @acme/ai-platform
+.env.example              @acme/ai-platform
+/tools/agents/            # intentionally unowned (experimental)
