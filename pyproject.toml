@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grantlock"
+version = "0.1.0"
+description = "Lockfile for what your AI agent stack runs as: credentials, OAuth scopes, CI tokens, MCP secrets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "All Rights Reserved (see LICENSE)" }
+dependencies = [
+  "pyyaml>=6.0",
+  "jsonschema>=4.17",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+grantlock = "grantlock.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["grantlock*", "grantbench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
