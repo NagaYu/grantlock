@@ -1,0 +1,308 @@
+{
+ "frozen_dev": {
+  "recall": {
+   "G1": [
+    10,
+    10
+   ],
+   "G2": [
+    10,
+    10
+   ],
+   "G3": [
+    10,
+    10
+   ],
+   "G4": [
+    10,
+    10
+   ],
+   "G5": [
+    10,
+    10
+   ],
+   "G6": [
+    10,
+    10
+   ],
+   "G7": [
+    10,
+    10
+   ],
+   "G8": [
+    10,
+    10
+   ]
+  },
+  "clean": [
+   0,
+   24
+  ],
+  "diff": [
+   16,
+   16
+  ],
+  "sha256": "806d821b43fe1813f21d0c7dded45e2b5871b50426a012fd791dbf5627aeae76"
+ },
+ "dev_ext": {
+  "recall": {
+   "G1": [
+    6,
+    6
+   ],
+   "G2": [
+    6,
+    6
+   ],
+   "G3": [
+    6,
+    6
+   ],
+   "G4": [
+    6,
+    6
+   ],
+   "G5": [
+    6,
+    6
+   ],
+   "G6": [
+    6,
+    6
+   ],
+   "G7": [
+    6,
+    6
+   ],
+   "G8": [
+    6,
+    6
+   ]
+  },
+  "clean": [
+   0,
+   12
+  ],
+  "diff": [
+   8,
+   8
+  ],
+  "sha256": "0f5582ee1642557f779b93444f6c5653f15cb92359aa6bcfc1d37352c0244a8d"
+ },
+ "holdout_disclosed": {
+  "recall": {
+   "G1": [
+    8,
+    8
+   ],
+   "G2": [
+    6,
+    7
+   ],
+   "G3": [
+    5,
+    7
+   ],
+   "G4": [
+    8,
+    8
+   ],
+   "G5": [
+    8,
+    8
+   ],
+   "G6": [
+    3,
+    8
+   ],
+   "G7": [
+    8,
+    8
+   ],
+   "G8": [
+    5,
+    8
+   ]
+  },
+  "clean": [
+   0,
+   16
+  ],
+  "diff": [
+   4,
+   8
+  ],
+  "sha256": "a9be25e0536c79a2239aa4fd5d5852b0e17396249c36e942cf87b5701236b4c3",
+  "recall_by_surface": {
+   "compose": {
+    "G1": {
+     "detected": 2,
+     "total": 2
+    },
+    "G4": {
+     "detected": 1,
+     "total": 1
+    },
+    "G5": {
+     "detected": 2,
+     "total": 2
+    },
+    "G7": {
+     "detected": 1,
+     "total": 1
+    },
+    "G8": {
+     "detected": 1,
+     "total": 1
+    }
+   },
+   "env": {
+    "G4": {
+     "detected": 2,
+     "total": 2
+    },
+    "G7": {
+     "detected": 2,
+     "total": 2
+    },
+    "G8": {
+     "detected": 0,
+     "total": 2
+    }
+   },
+   "gha": {
+    "G1": {
+     "detected": 2,
+     "total": 2
+    },
+    "G2": {
+     "detected": 3,
+     "total": 3
+    },
+    "G3": {
+     "detected": 2,
+     "total": 2
+    },
+    "G4": {
+     "detected": 1,
+     "total": 1
+    },
+    "G5": {
+     "detected": 2,
+     "total": 2
+    },
+    "G6": {
+     "detected": 3,
+     "total": 3
+    },
+    "G7": {
+     "detected": 1,
+     "total": 1
+    },
+    "G8": {
+     "detected": 1,
+     "total": 1
+    }
+   },
+   "k8s": {
+    "G1": {
+     "detected": 1,
+     "total": 1
+    },
+    "G2": {
+     "detected": 0,
+     "total": 1
+    },
+    "G3": {
+     "detected": 0,
+     "total": 2
+    },
+    "G4": {
+     "detected": 1,
+     "total": 1
+    },
+    "G5": {
+     "detected": 1,
+     "total": 1
+    },
+    "G6": {
+     "detected": 0,
+     "total": 2
+    },
+    "G7": {
+     "detected": 1,
+     "total": 1
+    },
+    "G8": {
+     "detected": 1,
+     "total": 1
+    }
+   },
+   "mcp": {
+    "G1": {
+     "detected": 2,
+     "total": 2
+    },
+    "G2": {
+     "detected": 2,
+     "total": 2
+    },
+    "G3": {
+     "detected": 1,
+     "total": 1
+    },
+    "G4": {
+     "detected": 2,
+     "total": 2
+    },
+    "G5": {
+     "detected": 2,
+     "total": 2
+    },
+    "G7": {
+     "detected": 2,
+     "total": 2
+    },
+    "G8": {
+     "detected": 2,
+     "total": 2
+    }
+   },
+   "terraform": {
+    "G1": {
+     "detected": 1,
+     "total": 1
+    },
+    "G2": {
+     "detected": 1,
+     "total": 1
+    },
+    "G3": {
+     "detected": 2,
+     "total": 2
+    },
+    "G4": {
+     "detected": 1,
+     "total": 1
+    },
+    "G5": {
+     "detected": 1,
+     "total": 1
+    },
+    "G6": {
+     "detected": 0,
+     "total": 3
+    },
+    "G7": {
+     "detected": 1,
+     "total": 1
+    },
+    "G8": {
+     "detected": 0,
+     "total": 1
+    }
+   }
+  },
+  "excluded_out_of_scope": 2
+ }
+}

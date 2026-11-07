@@ -1,0 +1,1007 @@
+{
+  "NagaYu/caplock": {
+    "surfaces": {
+      "mcp": {
+        "files_considered": 5,
+        "files_with_identities": 3,
+        "bindings": 5,
+        "findings": 7
+      },
+      "gha": {
+        "files_considered": 1,
+        "files_with_identities": 1,
+        "bindings": 2,
+        "findings": 2
+      },
+      "env": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "compose": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "k8s": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "terraform": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      }
+    },
+    "markdown_files_with_unscanned_mcp_examples": 1,
+    "warnings": [],
+    "findings": [
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/ci.yml#action-selftest:gha_workflow:.github/workflows/ci.yml#action-selftest",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/ci.yml",
+        "line": 53,
+        "component": "ci/action-selftest",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#action-selftest",
+        "message": "gha_workflow 'ci/action-selftest' (.github/workflows/ci.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/ci.yml#action-selftest"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/ci.yml#test:gha_workflow:.github/workflows/ci.yml#test",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/ci.yml",
+        "line": 13,
+        "component": "ci/test",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#test",
+        "message": "gha_workflow 'ci/test' (.github/workflows/ci.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/ci.yml#test"
+      },
+      {
+        "finding_id": "G4:unknown:NOTES_TOKEN:mcp_server:examples/demo-workspace/.vscode/mcp.json#notes",
+        "class": "G4",
+        "severity": "warning",
+        "file": "examples/demo-workspace/.vscode/mcp.json",
+        "line": 7,
+        "component": "notes",
+        "identity_id": "unknown:NOTES_TOKEN",
+        "message": "mcp_server 'notes' (examples/demo-workspace/.vscode/mcp.json) has no CODEOWNERS entry or declared owner for unknown:NOTES_TOKEN"
+      },
+      {
+        "finding_id": "G4:unknown:SEARCH_API_KEY:mcp_server:fixtures/configs/portable_mcp.json#remote-search",
+        "class": "G4",
+        "severity": "warning",
+        "file": "fixtures/configs/portable_mcp.json",
+        "line": 25,
+        "component": "remote-search",
+        "identity_id": "unknown:SEARCH_API_KEY",
+        "message": "mcp_server 'remote-search' (fixtures/configs/portable_mcp.json) has no CODEOWNERS entry or declared owner for unknown:SEARCH_API_KEY"
+      },
+      {
+        "finding_id": "G4:github:github-token:mcp_server:fixtures/configs/vscode_mcp.json#docs",
+        "class": "G4",
+        "severity": "warning",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "line": 21,
+        "component": "docs",
+        "identity_id": "github:github-token",
+        "message": "mcp_server 'docs' (fixtures/configs/vscode_mcp.json) has no CODEOWNERS entry or declared owner for github:github-token"
+      },
+      {
+        "finding_id": "G4:github:github-token:mcp_server:fixtures/configs/vscode_mcp.json#github",
+        "class": "G4",
+        "severity": "warning",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "line": 16,
+        "component": "github",
+        "identity_id": "github:github-token",
+        "message": "mcp_server 'github' (fixtures/configs/vscode_mcp.json) has no CODEOWNERS entry or declared owner for github:github-token"
+      },
+      {
+        "finding_id": "G4:unknown:DOCS_TENANT:mcp_server:fixtures/configs/vscode_mcp.json#docs",
+        "class": "G4",
+        "severity": "warning",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "line": 20,
+        "component": "docs",
+        "identity_id": "unknown:DOCS_TENANT",
+        "message": "mcp_server 'docs' (fixtures/configs/vscode_mcp.json) has no CODEOWNERS entry or declared owner for unknown:DOCS_TENANT"
+      },
+      {
+        "finding_id": "G5:github:github-token:mcp_server:fixtures/configs/vscode_mcp.json#docs",
+        "class": "G5",
+        "severity": "warning",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "line": 21,
+        "component": "docs",
+        "identity_id": "github:github-token",
+        "message": "github:github-token is used by 2 components"
+      },
+      {
+        "finding_id": "G5:github:github-token:mcp_server:fixtures/configs/vscode_mcp.json#github",
+        "class": "G5",
+        "severity": "warning",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "line": 16,
+        "component": "github",
+        "identity_id": "github:github-token",
+        "message": "github:github-token is used by 2 components"
+      }
+    ],
+    "commit": "22c5748de4bdad30883e246b8415e60f9de417a8"
+  },
+  "modelcontextprotocol/servers": {
+    "surfaces": {
+      "mcp": {
+        "files_considered": 1,
+        "files_with_identities": 1,
+        "bindings": 1,
+        "findings": 1
+      },
+      "gha": {
+        "files_considered": 11,
+        "files_with_identities": 11,
+        "bindings": 39,
+        "findings": 41
+      },
+      "env": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "compose": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "k8s": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "terraform": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      }
+    },
+    "markdown_files_with_unscanned_mcp_examples": 11,
+    "warnings": [],
+    "findings": [
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/dco.yml#dco:gha_workflow:.github/workflows/dco.yml#dco",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/dco.yml",
+        "line": 42,
+        "component": "DCO/dco",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/dco.yml#dco",
+        "message": "gha_workflow 'DCO/dco' (.github/workflows/dco.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/dco.yml#dco"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/dco.yml#dispatch-status:gha_workflow:.github/workflows/dco.yml#dispatch-status",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/dco.yml",
+        "line": 103,
+        "component": "DCO/dispatch-status",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/dco.yml#dispatch-status",
+        "message": "gha_workflow 'DCO/dispatch-status' (.github/workflows/dco.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/dco.yml#dispatch-status"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/dco.yml#dispatch-status-pending:gha_workflow:.github/workflows/dco.yml#dispatch-status-pending",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/dco.yml",
+        "line": 74,
+        "component": "DCO/dispatch-status-pending",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/dco.yml#dispatch-status-pending",
+        "message": "gha_workflow 'DCO/dispatch-status-pending' (.github/workflows/dco.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/dco.yml#dispatch-status-pending"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/dependabot-alerts.yml#alert-sweep:gha_workflow:.github/workflows/dependabot-alerts.yml#alert-sweep",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/dependabot-alerts.yml",
+        "line": 57,
+        "component": "Dependabot Alert Sweep/alert-sweep",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/dependabot-alerts.yml#alert-sweep",
+        "message": "gha_workflow 'Dependabot Alert Sweep/alert-sweep' (.github/workflows/dependabot-alerts.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/dependabot-alerts.yml#alert-sweep"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/dependency-refresh.yml#dependency-sweep:gha_workflow:.github/workflows/dependency-refresh.yml#dependency-sweep",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/dependency-refresh.yml",
+        "line": 40,
+        "component": "Dependency Refresh/dependency-sweep",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/dependency-refresh.yml#dependency-sweep",
+        "message": "gha_workflow 'Dependency Refresh/dependency-sweep' (.github/workflows/dependency-refresh.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/dependency-refresh.yml#dependency-sweep"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#comment:gha_workflow:.github/workflows/everything-mcp-diff.yml#comment",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "line": 287,
+        "component": "Everything Server MCP Diff/comment",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#comment",
+        "message": "gha_workflow 'Everything Server MCP Diff/comment' (.github/workflows/everything-mcp-diff.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#comment"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#diff:gha_workflow:.github/workflows/everything-mcp-diff.yml#diff",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "line": 90,
+        "component": "Everything Server MCP Diff/diff",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#diff",
+        "message": "gha_workflow 'Everything Server MCP Diff/diff' (.github/workflows/everything-mcp-diff.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#diff"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#dispatch-status:gha_workflow:.github/workflows/everything-mcp-diff.yml#dispatch-status",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "line": 241,
+        "component": "Everything Server MCP Diff/dispatch-status",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#dispatch-status",
+        "message": "gha_workflow 'Everything Server MCP Diff/dispatch-status' (.github/workflows/everything-mcp-diff.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#dispatch-status"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#dispatch-status-pending:gha_workflow:.github/workflows/everything-mcp-diff.yml#dispatch-status-pending",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "line": 210,
+        "component": "Everything Server MCP Diff/dispatch-status-pending",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#dispatch-status-pending",
+        "message": "gha_workflow 'Everything Server MCP Diff/dispatch-status-pending' (.github/workflows/everything-mcp-diff.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/everything-mcp-diff.yml#dispatch-status-pending"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/main-source.yml#main-source:gha_workflow:.github/workflows/main-source.yml#main-source",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/main-source.yml",
+        "line": 29,
+        "component": "main-source/main-source",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/main-source.yml#main-source",
+        "message": "gha_workflow 'main-source/main-source' (.github/workflows/main-source.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/main-source.yml#main-source"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/prepare-python-release.yml#prepare:gha_workflow:.github/workflows/prepare-python-release.yml#prepare",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/prepare-python-release.yml",
+        "line": 37,
+        "component": "Prepare Python Release/prepare",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/prepare-python-release.yml#prepare",
+        "message": "gha_workflow 'Prepare Python Release/prepare' (.github/workflows/prepare-python-release.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/prepare-python-release.yml#prepare"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#build:gha_workflow:.github/workflows/python.yml#build",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 159,
+        "component": "Python/build",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#build",
+        "message": "gha_workflow 'Python/build' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#build"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#coverage:gha_workflow:.github/workflows/python.yml#coverage",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 92,
+        "component": "Python/coverage",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#coverage",
+        "message": "gha_workflow 'Python/coverage' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#coverage"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#detect-packages:gha_workflow:.github/workflows/python.yml#detect-packages",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 31,
+        "component": "Python/detect-packages",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#detect-packages",
+        "message": "gha_workflow 'Python/detect-packages' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#detect-packages"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#dispatch-status:gha_workflow:.github/workflows/python.yml#dispatch-status",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 236,
+        "component": "Python/dispatch-status",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#dispatch-status",
+        "message": "gha_workflow 'Python/dispatch-status' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#dispatch-status"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#dispatch-status-pending:gha_workflow:.github/workflows/python.yml#dispatch-status-pending",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 203,
+        "component": "Python/dispatch-status-pending",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#dispatch-status-pending",
+        "message": "gha_workflow 'Python/dispatch-status-pending' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#dispatch-status-pending"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#script-tests:gha_workflow:.github/workflows/python.yml#script-tests",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 46,
+        "component": "Python/script-tests",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#script-tests",
+        "message": "gha_workflow 'Python/script-tests' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#script-tests"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#test:gha_workflow:.github/workflows/python.yml#test",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 60,
+        "component": "Python/test",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#test",
+        "message": "gha_workflow 'Python/test' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#test"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/python.yml#test-windows:gha_workflow:.github/workflows/python.yml#test-windows",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/python.yml",
+        "line": 121,
+        "component": "Python/test-windows",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/python.yml#test-windows",
+        "message": "gha_workflow 'Python/test-windows' (.github/workflows/python.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/python.yml#test-windows"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/release.yml#build-npm:gha_workflow:.github/workflows/release.yml#build-npm",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/release.yml",
+        "line": 127,
+        "component": "Release/build-npm",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#build-npm",
+        "message": "gha_workflow 'Release/build-npm' (.github/workflows/release.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/release.yml#build-npm"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/release.yml#build-pypi:gha_workflow:.github/workflows/release.yml#build-pypi",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/release.yml",
+        "line": 368,
+        "component": "Release/build-pypi",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#build-pypi",
+        "message": "gha_workflow 'Release/build-pypi' (.github/workflows/release.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/release.yml#build-pypi"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/release.yml#detect-packages:gha_workflow:.github/workflows/release.yml#detect-packages",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/release.yml",
+        "line": 82,
+        "component": "Release/detect-packages",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#detect-packages",
+        "message": "gha_workflow 'Release/detect-packages' (.github/workflows/release.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/release.yml#detect-packages"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/release.yml#publish-npm:gha_workflow:.github/workflows/release.yml#publish-npm",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/release.yml",
+        "line": 190,
+        "component": "Release/publish-npm",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#publish-npm",
+        "message": "gha_workflow 'Release/publish-npm' (.github/workflows/release.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/release.yml#publish-npm"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/release.yml#publish-pypi:gha_workflow:.github/workflows/release.yml#publish-pypi",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/release.yml",
+        "line": 422,
+        "component": "Release/publish-pypi",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#publish-pypi",
+        "message": "gha_workflow 'Release/publish-pypi' (.github/workflows/release.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/release.yml#publish-pypi"
+      },
+      {
+        "finding_id": "G4:pypi:oidc:trusted-publisher:gha_workflow:.github/workflows/release.yml#publish-pypi",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/release.yml",
+        "line": 475,
+        "component": "Release/publish-pypi",
+        "identity_id": "pypi:oidc:trusted-publisher",
+        "message": "gha_workflow 'Release/publish-pypi' (.github/workflows/release.yml) has no CODEOWNERS entry or declared owner for pypi:oidc:trusted-publisher"
+      },
+      {
+        "finding_id": "G4:anthropic:ANTHROPIC_API_KEY:gha_workflow:.github/workflows/sdk-watch.yml#analyze",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 142,
+        "component": "SDK Watch/analyze",
+        "identity_id": "anthropic:ANTHROPIC_API_KEY",
+        "message": "gha_workflow 'SDK Watch/analyze' (.github/workflows/sdk-watch.yml) has no CODEOWNERS entry or declared owner for anthropic:ANTHROPIC_API_KEY"
+      },
+      {
+        "finding_id": "G4:anthropic:ANTHROPIC_API_KEY:gha_workflow:.github/workflows/sdk-watch.yml#post",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 310,
+        "component": "SDK Watch/post",
+        "identity_id": "anthropic:ANTHROPIC_API_KEY",
+        "message": "gha_workflow 'SDK Watch/post' (.github/workflows/sdk-watch.yml) has no CODEOWNERS entry or declared owner for anthropic:ANTHROPIC_API_KEY"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#analyze:gha_workflow:.github/workflows/sdk-watch.yml#analyze",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 84,
+        "component": "SDK Watch/analyze",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#analyze",
+        "message": "gha_workflow 'SDK Watch/analyze' (.github/workflows/sdk-watch.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#analyze"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#post:gha_workflow:.github/workflows/sdk-watch.yml#post",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 274,
+        "component": "SDK Watch/post",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#post",
+        "message": "gha_workflow 'SDK Watch/post' (.github/workflows/sdk-watch.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#post"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#sweep:gha_workflow:.github/workflows/sdk-watch.yml#sweep",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 53,
+        "component": "SDK Watch/sweep",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#sweep",
+        "message": "gha_workflow 'SDK Watch/sweep' (.github/workflows/sdk-watch.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/sdk-watch.yml#sweep"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#coverage:gha_workflow:.github/workflows/typescript.yml#coverage",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 123,
+        "component": "TypeScript/coverage",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#coverage",
+        "message": "gha_workflow 'TypeScript/coverage' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#coverage"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#detect-packages:gha_workflow:.github/workflows/typescript.yml#detect-packages",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 63,
+        "component": "TypeScript/detect-packages",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#detect-packages",
+        "message": "gha_workflow 'TypeScript/detect-packages' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#detect-packages"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#dispatch-status:gha_workflow:.github/workflows/typescript.yml#dispatch-status",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 259,
+        "component": "TypeScript/dispatch-status",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#dispatch-status",
+        "message": "gha_workflow 'TypeScript/dispatch-status' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#dispatch-status"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#dispatch-status-pending:gha_workflow:.github/workflows/typescript.yml#dispatch-status-pending",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 226,
+        "component": "TypeScript/dispatch-status-pending",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#dispatch-status-pending",
+        "message": "gha_workflow 'TypeScript/dispatch-status-pending' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#dispatch-status-pending"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#root-guards:gha_workflow:.github/workflows/typescript.yml#root-guards",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 40,
+        "component": "TypeScript/root-guards",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#root-guards",
+        "message": "gha_workflow 'TypeScript/root-guards' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#root-guards"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#smoke:gha_workflow:.github/workflows/typescript.yml#smoke",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 187,
+        "component": "TypeScript/smoke",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#smoke",
+        "message": "gha_workflow 'TypeScript/smoke' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#smoke"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#test-windows:gha_workflow:.github/workflows/typescript.yml#test-windows",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 155,
+        "component": "TypeScript/test-windows",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#test-windows",
+        "message": "gha_workflow 'TypeScript/test-windows' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#test-windows"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/typescript.yml#validate:gha_workflow:.github/workflows/typescript.yml#validate",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/typescript.yml",
+        "line": 87,
+        "component": "TypeScript/validate",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/typescript.yml#validate",
+        "message": "gha_workflow 'TypeScript/validate' (.github/workflows/typescript.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/typescript.yml#validate"
+      },
+      {
+        "finding_id": "G4:github:GITHUB_TOKEN@.github/workflows/version-packages.yml#version:gha_workflow:.github/workflows/version-packages.yml#version",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".github/workflows/version-packages.yml",
+        "line": 39,
+        "component": "Version Packages/version",
+        "identity_id": "github:GITHUB_TOKEN@.github/workflows/version-packages.yml#version",
+        "message": "gha_workflow 'Version Packages/version' (.github/workflows/version-packages.yml) has no CODEOWNERS entry or declared owner for github:GITHUB_TOKEN@.github/workflows/version-packages.yml#version"
+      },
+      {
+        "finding_id": "G4:unknown:oauth:modelcontextprotocol.io:mcp_server:.mcp.json#mcp-docs",
+        "class": "G4",
+        "severity": "warning",
+        "file": ".mcp.json",
+        "line": 5,
+        "component": "mcp-docs",
+        "identity_id": "unknown:oauth:modelcontextprotocol.io",
+        "message": "mcp_server 'mcp-docs' (.mcp.json) has no CODEOWNERS entry or declared owner for unknown:oauth:modelcontextprotocol.io"
+      },
+      {
+        "finding_id": "G5:anthropic:ANTHROPIC_API_KEY:gha_workflow:.github/workflows/sdk-watch.yml#analyze",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 142,
+        "component": "SDK Watch/analyze",
+        "identity_id": "anthropic:ANTHROPIC_API_KEY",
+        "message": "anthropic:ANTHROPIC_API_KEY is used by 2 components"
+      },
+      {
+        "finding_id": "G5:anthropic:ANTHROPIC_API_KEY:gha_workflow:.github/workflows/sdk-watch.yml#post",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/sdk-watch.yml",
+        "line": 310,
+        "component": "SDK Watch/post",
+        "identity_id": "anthropic:ANTHROPIC_API_KEY",
+        "message": "anthropic:ANTHROPIC_API_KEY is used by 2 components"
+      }
+    ],
+    "commit": "36380287ed3b15d115b55f546617d723072b1296"
+  },
+  "github/github-mcp-server": {
+    "surfaces": {
+      "mcp": {
+        "files_considered": 2,
+        "files_with_identities": 2,
+        "bindings": 2,
+        "findings": 0
+      },
+      "gha": {
+        "files_considered": 13,
+        "files_with_identities": 13,
+        "bindings": 65,
+        "findings": 36
+      },
+      "env": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "compose": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "k8s": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "terraform": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      }
+    },
+    "markdown_files_with_unscanned_mcp_examples": 12,
+    "warnings": [],
+    "findings": [
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/issue-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 72,
+        "component": "Issue Triage/activation",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/issue-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 72,
+        "component": "Issue Triage/agent",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/issue-triage.lock.yml#check",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 72,
+        "component": "Issue Triage/check",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/issue-triage.lock.yml#conclusion",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 72,
+        "component": "Issue Triage/conclusion",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/issue-triage.lock.yml#detection",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 72,
+        "component": "Issue Triage/detection",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/issue-triage.lock.yml#safe_outputs",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 72,
+        "component": "Issue Triage/safe_outputs",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/issue-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 75,
+        "component": "Issue Triage/activation",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/issue-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 75,
+        "component": "Issue Triage/agent",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/issue-triage.lock.yml#check",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 75,
+        "component": "Issue Triage/check",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/issue-triage.lock.yml#conclusion",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 75,
+        "component": "Issue Triage/conclusion",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/issue-triage.lock.yml#detection",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 75,
+        "component": "Issue Triage/detection",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/issue-triage.lock.yml#safe_outputs",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 75,
+        "component": "Issue Triage/safe_outputs",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_MCP_SERVER_TOKEN:gha_workflow:.github/workflows/issue-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 219,
+        "component": "Issue Triage/activation",
+        "identity_id": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN",
+        "message": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN is used by 4 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_MCP_SERVER_TOKEN:gha_workflow:.github/workflows/issue-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 521,
+        "component": "Issue Triage/agent",
+        "identity_id": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN",
+        "message": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN is used by 4 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/issue-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 218,
+        "component": "Issue Triage/activation",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/issue-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 521,
+        "component": "Issue Triage/agent",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/issue-triage.lock.yml#conclusion",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 1445,
+        "component": "Issue Triage/conclusion",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/issue-triage.lock.yml#safe_outputs",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "line": 2128,
+        "component": "Issue Triage/safe_outputs",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/pr-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 77,
+        "component": "Pull Request Triage/activation",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/pr-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 77,
+        "component": "Pull Request Triage/agent",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/pr-triage.lock.yml#check",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 77,
+        "component": "Pull Request Triage/check",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/pr-triage.lock.yml#conclusion",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 77,
+        "component": "Pull Request Triage/conclusion",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/pr-triage.lock.yml#detection",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 77,
+        "component": "Pull Request Triage/detection",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_ENDPOINT:gha_workflow:.github/workflows/pr-triage.lock.yml#safe_outputs",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 77,
+        "component": "Pull Request Triage/safe_outputs",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_ENDPOINT",
+        "message": "github:GH_AW_DEFAULT_OTLP_ENDPOINT is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/pr-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 80,
+        "component": "Pull Request Triage/activation",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/pr-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 80,
+        "component": "Pull Request Triage/agent",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/pr-triage.lock.yml#check",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 80,
+        "component": "Pull Request Triage/check",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/pr-triage.lock.yml#conclusion",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 80,
+        "component": "Pull Request Triage/conclusion",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/pr-triage.lock.yml#detection",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 80,
+        "component": "Pull Request Triage/detection",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_DEFAULT_OTLP_HEADERS:gha_workflow:.github/workflows/pr-triage.lock.yml#safe_outputs",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 80,
+        "component": "Pull Request Triage/safe_outputs",
+        "identity_id": "github:GH_AW_DEFAULT_OTLP_HEADERS",
+        "message": "github:GH_AW_DEFAULT_OTLP_HEADERS is used by 12 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_MCP_SERVER_TOKEN:gha_workflow:.github/workflows/pr-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 219,
+        "component": "Pull Request Triage/activation",
+        "identity_id": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN",
+        "message": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN is used by 4 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_MCP_SERVER_TOKEN:gha_workflow:.github/workflows/pr-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 514,
+        "component": "Pull Request Triage/agent",
+        "identity_id": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN",
+        "message": "github:GH_AW_GITHUB_MCP_SERVER_TOKEN is used by 4 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/pr-triage.lock.yml#activation",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 218,
+        "component": "Pull Request Triage/activation",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/pr-triage.lock.yml#agent",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 514,
+        "component": "Pull Request Triage/agent",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/pr-triage.lock.yml#conclusion",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 1392,
+        "component": "Pull Request Triage/conclusion",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      },
+      {
+        "finding_id": "G5:github:GH_AW_GITHUB_TOKEN:gha_workflow:.github/workflows/pr-triage.lock.yml#safe_outputs",
+        "class": "G5",
+        "severity": "warning",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "line": 2070,
+        "component": "Pull Request Triage/safe_outputs",
+        "identity_id": "github:GH_AW_GITHUB_TOKEN",
+        "message": "github:GH_AW_GITHUB_TOKEN is used by 8 components"
+      }
+    ],
+    "commit": "99d6d6503a7b2a133e2f8a595d6d0ba24b4086d3"
+  }
+}

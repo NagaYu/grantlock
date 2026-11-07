@@ -1,0 +1,799 @@
+{
+  "NagaYu/caplock": {
+    "commit": "22c5748de4bdad30883e246b8415e60f9de417a8",
+    "surfaces": {
+      "mcp": {
+        "files_considered": 5,
+        "files_with_identities": 3,
+        "bindings": 5,
+        "findings": 7
+      },
+      "gha": {
+        "files_considered": 1,
+        "files_with_identities": 1,
+        "bindings": 2,
+        "findings": 2
+      },
+      "env": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "compose": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "k8s": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "terraform": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      }
+    },
+    "markdown_files_with_unscanned_mcp_examples": 1,
+    "findings": 9,
+    "verdicts": {
+      "valid": 2,
+      "false_positive": 7
+    },
+    "by_class_and_verdict": {
+      "G4/false_positive": 5,
+      "G4/valid": 2,
+      "G5/false_positive": 2
+    },
+    "rows": [
+      {
+        "class": "G4",
+        "file": ".github/workflows/ci.yml",
+        "component": "ci/action-selftest",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS: the CI job token has no owner"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/ci.yml",
+        "component": "ci/test",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS: the CI job token has no owner"
+      },
+      {
+        "class": "G4",
+        "file": "examples/demo-workspace/.vscode/mcp.json",
+        "component": "notes",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      },
+      {
+        "class": "G4",
+        "file": "fixtures/configs/portable_mcp.json",
+        "component": "remote-search",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      },
+      {
+        "class": "G4",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "component": "docs",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      },
+      {
+        "class": "G4",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "component": "github",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      },
+      {
+        "class": "G4",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "component": "docs",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      },
+      {
+        "class": "G5",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "component": "docs",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      },
+      {
+        "class": "G5",
+        "file": "fixtures/configs/vscode_mcp.json",
+        "component": "github",
+        "verdict": "false_positive",
+        "reason": "test fixture / example config, not a live identity (spec-true on its face, not actionable)"
+      }
+    ]
+  },
+  "modelcontextprotocol/servers": {
+    "commit": "36380287ed3b15d115b55f546617d723072b1296",
+    "surfaces": {
+      "mcp": {
+        "files_considered": 1,
+        "files_with_identities": 1,
+        "bindings": 1,
+        "findings": 1
+      },
+      "gha": {
+        "files_considered": 11,
+        "files_with_identities": 11,
+        "bindings": 39,
+        "findings": 41
+      },
+      "env": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "compose": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "k8s": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "terraform": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      }
+    },
+    "markdown_files_with_unscanned_mcp_examples": 11,
+    "findings": 42,
+    "verdicts": {
+      "valid": 42
+    },
+    "by_class_and_verdict": {
+      "G4/valid": 40,
+      "G5/valid": 2
+    },
+    "rows": [
+      {
+        "class": "G4",
+        "file": ".github/workflows/dco.yml",
+        "component": "DCO/dco",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/dco.yml",
+        "component": "DCO/dispatch-status",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/dco.yml",
+        "component": "DCO/dispatch-status-pending",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/dependabot-alerts.yml",
+        "component": "Dependabot Alert Sweep/alert-sweep",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/dependency-refresh.yml",
+        "component": "Dependency Refresh/dependency-sweep",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "component": "Everything Server MCP Diff/comment",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "component": "Everything Server MCP Diff/diff",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "component": "Everything Server MCP Diff/dispatch-status",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/everything-mcp-diff.yml",
+        "component": "Everything Server MCP Diff/dispatch-status-pending",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/main-source.yml",
+        "component": "main-source/main-source",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/prepare-python-release.yml",
+        "component": "Prepare Python Release/prepare",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/build",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/coverage",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/detect-packages",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/dispatch-status",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/dispatch-status-pending",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/script-tests",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/test",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/python.yml",
+        "component": "Python/test-windows",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/release.yml",
+        "component": "Release/build-npm",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/release.yml",
+        "component": "Release/build-pypi",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/release.yml",
+        "component": "Release/detect-packages",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/release.yml",
+        "component": "Release/publish-npm",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/release.yml",
+        "component": "Release/publish-pypi",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/release.yml",
+        "component": "Release/publish-pypi",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/analyze",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/post",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/analyze",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/post",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/sweep",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/coverage",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/detect-packages",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/dispatch-status",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/dispatch-status-pending",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/root-guards",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/smoke",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/test-windows",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/typescript.yml",
+        "component": "TypeScript/validate",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".github/workflows/version-packages.yml",
+        "component": "Version Packages/version",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G4",
+        "file": ".mcp.json",
+        "component": "mcp-docs",
+        "verdict": "valid",
+        "reason": "repository has no CODEOWNERS covering workflows / MCP config"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/analyze",
+        "verdict": "valid",
+        "reason": "the same Anthropic API key is used by two jobs (analyze, post); per-job credentials possible"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/sdk-watch.yml",
+        "component": "SDK Watch/post",
+        "verdict": "valid",
+        "reason": "the same Anthropic API key is used by two jobs (analyze, post); per-job credentials possible"
+      }
+    ]
+  },
+  "github/github-mcp-server": {
+    "commit": "99d6d6503a7b2a133e2f8a595d6d0ba24b4086d3",
+    "surfaces": {
+      "mcp": {
+        "files_considered": 2,
+        "files_with_identities": 2,
+        "bindings": 2,
+        "findings": 0
+      },
+      "gha": {
+        "files_considered": 13,
+        "files_with_identities": 13,
+        "bindings": 65,
+        "findings": 36
+      },
+      "env": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "compose": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "k8s": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      },
+      "terraform": {
+        "files_considered": 0,
+        "files_with_identities": 0,
+        "bindings": 0,
+        "findings": 0
+      }
+    },
+    "markdown_files_with_unscanned_mcp_examples": 12,
+    "findings": 36,
+    "verdicts": {
+      "false_positive": 12,
+      "undecided": 12,
+      "valid": 12
+    },
+    "by_class_and_verdict": {
+      "G5/false_positive": 12,
+      "G5/undecided": 12,
+      "G5/valid": 12
+    },
+    "rows": [
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/activation",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/agent",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/check",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/conclusion",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/detection",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/safe_outputs",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/activation",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/agent",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/check",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/conclusion",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/detection",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/safe_outputs",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/activation",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/agent",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/activation",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/agent",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/conclusion",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/issue-triage.lock.yml",
+        "component": "Issue Triage/safe_outputs",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/activation",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/agent",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/check",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/conclusion",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/detection",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/safe_outputs",
+        "verdict": "false_positive",
+        "reason": "an endpoint URL stored as a secret is not a credential; all secrets.* are treated as credentials (D-009)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/activation",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/agent",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/check",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/conclusion",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/detection",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/safe_outputs",
+        "verdict": "undecided",
+        "reason": "OTLP headers may or may not carry an auth token; cannot tell from the name"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/activation",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/agent",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/activation",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/agent",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/conclusion",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      },
+      {
+        "class": "G5",
+        "file": ".github/workflows/pr-triage.lock.yml",
+        "component": "Pull Request Triage/safe_outputs",
+        "verdict": "valid",
+        "reason": "one GitHub token secret shared by several jobs of a generated agent workflow (intra-workflow sharing)"
+      }
+    ]
+  },
+  "_fixed_during_review": {
+    "description": "false positives found in the first probe run and fixed with regression tests (D-036)",
+    "items": [
+      {
+        "repo": "modelcontextprotocol/servers",
+        "classes": [
+          "G1",
+          "G4"
+        ],
+        "count": 2,
+        "cause": "shell variable `npm_packages` in a run: script matched a too-loose npm token shape"
+      },
+      {
+        "repo": "github/github-mcp-server",
+        "classes": [
+          "G5"
+        ],
+        "count": 2,
+        "cause": "`steps.redact_secrets.outcome` parsed as a secrets.* reference"
+      }
+    ],
+    "first_run_totals": {
+      "NagaYu/caplock": 9,
+      "modelcontextprotocol/servers": 44,
+      "github/github-mcp-server": 38
+    }
+  }
+}

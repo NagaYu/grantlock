@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.scores",
+  "split": "dev",
+  "corpus_sha256": "806d821b43fe1813f21d0c7dded45e2b5871b50426a012fd791dbf5627aeae76",
+  "grantlock": {
+    "recall_by_class": {
+      "G1": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G2": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G3": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G4": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G5": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G6": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G7": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G8": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      }
+    },
+    "item_recall_by_class": {
+      "G1": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G2": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G3": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G4": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G5": {
+        "detected": 19,
+        "total": 19,
+        "recall": 1.0
+      },
+      "G6": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G7": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      "G8": {
+        "detected": 10,
+        "total": 10,
+        "recall": 1.0
+      }
+    },
+    "planted_misses": [],
+    "other_classes_on_planted_cases": {
+      "G1": 0,
+      "G2": 6,
+      "G3": 0,
+      "G4": 0,
+      "G5": 0,
+      "G6": 0,
+      "G7": 24,
+      "G8": 12
+    },
+    "clean": {
+      "cases": 24,
+      "fp_cases": 0,
+      "fp_rate": 0.0,
+      "fp_details": []
+    },
+    "diff_pair": {
+      "cases": 16,
+      "correct": 16,
+      "accuracy": 1.0,
+      "details": [
+        {
+          "case_id": "dev-diff-01",
+          "variant": "dp_benign_text",
+          "expected": [],
+          "predicted": [],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-02",
+          "variant": "dp_scope_reduce",
+          "expected": [],
+          "predicted": [],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-03",
+          "variant": "dp_rename_server",
+          "expected": [],
+          "predicted": [],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-04",
+          "variant": "g2_deploy_add",
+          "expected": [
+            "G2"
+          ],
+          "predicted": [
+            "G2"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-05",
+          "variant": "g7_prod_secret",
+          "expected": [
+            "G7"
+          ],
+          "predicted": [
+            "G7"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-06",
+          "variant": "g8_remove_server",
+          "expected": [
+            "G8"
+          ],
+          "predicted": [
+            "G8"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-07",
+          "variant": "g6_aws_static_replace",
+          "expected": [
+            "G6",
+            "G7",
+            "G8"
+          ],
+          "predicted": [
+            "G6",
+            "G7",
+            "G8"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-08",
+          "variant": "g3_job_write_all",
+          "expected": [
+            "G2",
+            "G3"
+          ],
+          "predicted": [
+            "G2",
+            "G3"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-09",
+          "variant": "g3_toolsets_all",
+          "expected": [
+            "G2",
+            "G3"
+          ],
+          "predicted": [
+            "G2",
+            "G3"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-10",
+          "variant": "g4_delete_codeowners",
+          "expected": [
+            "G4"
+          ],
+          "predicted": [
+            "G4"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-11",
+          "variant": "g5_second_server_same_pat",
+          "expected": [
+            "G5"
+          ],
+          "predicted": [
+            "G5"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-12",
+          "variant": "g1_env_literal",
+          "expected": [
+            "G1"
+          ],
+          "predicted": [
+            "G1"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-13",
+          "variant": "dp_swap_remote",
+          "expected": [
+            "G7",
+            "G8"
+          ],
+          "predicted": [
+            "G7",
+            "G8"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-14",
+          "variant": "g2_remove_workflow_perms",
+          "expected": [
+            "G2"
+          ],
+          "predicted": [
+            "G2"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-15",
+          "variant": "dp_new_job_reuse_eval",
+          "expected": [
+            "G5",
+            "G7"
+          ],
+          "predicted": [
+            "G5",
+            "G7"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-diff-16",
+          "variant": "dp_rename_job",
+          "expected": [
+            "G7",
+            "G8"
+          ],
+          "predicted": [
+            "G7",
+            "G8"
+          ],
+          "correct": true
+        }
+      ]
+    }
+  },
+  "baselines": {
+    "gitleaks": {
+      "status": "ok",
+      "reason": null,
+      "recall_by_class": {
+        "G1": {
+          "detected": 6,
+          "total": 10,
+          "recall": 0.6,
+          "note": null
+        },
+        "G2": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G3": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G4": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G5": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G6": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G7": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G8": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        }
+      },
+      "clean": {
+        "cases": 24,
+        "fp_cases": 0,
+        "fp_rate": 0.0
+      },
+      "diff_pair": "N/A (value scanners do not classify grant changes)"
+    },
+    "trufflehog": {
+      "status": "ok",
+      "reason": null,
+      "recall_by_class": {
+        "G1": {
+          "detected": 7,
+          "total": 10,
+          "recall": 0.7,
+          "note": null
+        },
+        "G2": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G3": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G4": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G5": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G6": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G7": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G8": {
+          "detected": 0,
+          "total": 10,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        }
+      },
+      "clean": {
+        "cases": 24,
+        "fp_cases": 0,
+        "fp_rate": 0.0
+      },
+      "diff_pair": "N/A (value scanners do not classify grant changes)"
+    }
+  },
+  "headline": {
+    "value_free_recall": {
+      "G2": 1.0,
+      "G3": 1.0,
+      "G7": 1.0
+    },
+    "value_free_recall_min": 1.0,
+    "clean_fp_rate": 0.0,
+    "criterion_5_pass": true
+  }
+}

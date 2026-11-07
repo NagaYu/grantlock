@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.scores",
+  "split": "dev-ext",
+  "corpus_sha256": "0f5582ee1642557f779b93444f6c5653f15cb92359aa6bcfc1d37352c0244a8d",
+  "grantlock": {
+    "recall_by_class": {
+      "G1": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G2": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G3": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G4": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G5": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G6": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G7": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      },
+      "G8": {
+        "detected": 6,
+        "total": 6,
+        "recall": 1.0
+      }
+    },
+    "recall_by_surface": {
+      "compose": {
+        "G1": {
+          "detected": 2,
+          "total": 2
+        },
+        "G4": {
+          "detected": 2,
+          "total": 2
+        },
+        "G5": {
+          "detected": 2,
+          "total": 2
+        },
+        "G6": {
+          "detected": 2,
+          "total": 2
+        },
+        "G7": {
+          "detected": 2,
+          "total": 2
+        },
+        "G8": {
+          "detected": 2,
+          "total": 2
+        }
+      },
+      "k8s": {
+        "G1": {
+          "detected": 2,
+          "total": 2
+        },
+        "G2": {
+          "detected": 3,
+          "total": 3
+        },
+        "G3": {
+          "detected": 3,
+          "total": 3
+        },
+        "G4": {
+          "detected": 2,
+          "total": 2
+        },
+        "G5": {
+          "detected": 2,
+          "total": 2
+        },
+        "G6": {
+          "detected": 2,
+          "total": 2
+        },
+        "G7": {
+          "detected": 2,
+          "total": 2
+        },
+        "G8": {
+          "detected": 2,
+          "total": 2
+        }
+      },
+      "terraform": {
+        "G1": {
+          "detected": 2,
+          "total": 2
+        },
+        "G2": {
+          "detected": 3,
+          "total": 3
+        },
+        "G3": {
+          "detected": 3,
+          "total": 3
+        },
+        "G4": {
+          "detected": 2,
+          "total": 2
+        },
+        "G5": {
+          "detected": 2,
+          "total": 2
+        },
+        "G6": {
+          "detected": 2,
+          "total": 2
+        },
+        "G7": {
+          "detected": 2,
+          "total": 2
+        },
+        "G8": {
+          "detected": 2,
+          "total": 2
+        }
+      }
+    },
+    "excluded_out_of_scope": [],
+    "fallback_matches": [],
+    "planted_misses": [],
+    "clean": {
+      "cases": 12,
+      "fp_cases": 0,
+      "fp_rate": 0.0,
+      "fp_details": []
+    },
+    "diff_pair": {
+      "cases": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "details": [
+        {
+          "case_id": "dev-ext-diff-01",
+          "expected": [],
+          "predicted": [],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-02",
+          "expected": [],
+          "predicted": [],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-03",
+          "expected": [],
+          "predicted": [],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-04",
+          "expected": [
+            "G2",
+            "G3"
+          ],
+          "predicted": [
+            "G2",
+            "G3"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-05",
+          "expected": [
+            "G6",
+            "G7"
+          ],
+          "predicted": [
+            "G6",
+            "G7"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-06",
+          "expected": [
+            "G1"
+          ],
+          "predicted": [
+            "G1"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-07",
+          "expected": [
+            "G8"
+          ],
+          "predicted": [
+            "G8"
+          ],
+          "correct": true
+        },
+        {
+          "case_id": "dev-ext-diff-08",
+          "expected": [
+            "G5"
+          ],
+          "predicted": [
+            "G5"
+          ],
+          "correct": true
+        }
+      ]
+    }
+  },
+  "baselines": {
+    "gitleaks": {
+      "status": "ok",
+      "reason": null,
+      "recall_by_class": {
+        "G1": {
+          "detected": 5,
+          "total": 6,
+          "recall": 0.8333,
+          "note": null
+        },
+        "G2": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G3": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G4": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G5": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G6": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G7": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G8": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        }
+      },
+      "clean": {
+        "cases": 12,
+        "fp_cases": 0,
+        "fp_rate": 0.0
+      },
+      "diff_pair": "N/A (value scanners do not classify grant changes)"
+    },
+    "trufflehog": {
+      "status": "ok",
+      "reason": null,
+      "recall_by_class": {
+        "G1": {
+          "detected": 6,
+          "total": 6,
+          "recall": 1.0,
+          "note": null
+        },
+        "G2": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G3": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G4": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G5": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G6": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G7": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        },
+        "G8": {
+          "detected": 0,
+          "total": 6,
+          "recall": 0.0,
+          "note": "structurally invisible to value scanners (recorded as 0)"
+        }
+      },
+      "clean": {
+        "cases": 12,
+        "fp_cases": 0,
+        "fp_rate": 0.0
+      },
+      "diff_pair": "N/A (value scanners do not classify grant changes)"
+    }
+  }
+}
