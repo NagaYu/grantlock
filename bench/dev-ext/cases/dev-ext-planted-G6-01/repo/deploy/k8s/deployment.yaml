@@ -1,0 +1,45 @@
+# release-helper — production manifests (namespace agents-prod).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: release-helper
+  namespace: agents-prod
+  labels:
+    app: release-helper
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: release-helper
+  template:
+    metadata:
+      labels:
+        app: release-helper
+    spec:
+      serviceAccountName: release-helper
+      containers:
+      - name: agent
+        image: ghcr.io/tyrell/release-helper:1.13.7
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        - name: MODEL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: agent-config
+              key: model
+        resources:
+          limits:
+            memory: 1Gi

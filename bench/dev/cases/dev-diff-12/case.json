@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-12",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "g1_env_literal",
+  "planted": [
+    {
+      "class": "G1",
+      "file": ".mcp.json",
+      "component": "tavily",
+      "note": "literal value pasted into env.TAVILY_API_KEY"
+    }
+  ],
+  "expected_labels": [
+    "G1"
+  ],
+  "description": "support-copilot の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

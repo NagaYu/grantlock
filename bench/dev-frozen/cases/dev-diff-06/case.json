@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-06",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "g8_remove_server",
+  "planted": [
+    {
+      "class": "G8",
+      "file": ".mcp.json",
+      "component": "slack",
+      "note": "server removed; credential still declared"
+    }
+  ],
+  "expected_labels": [
+    "G8"
+  ],
+  "description": "onboarding-buddy の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

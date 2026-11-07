@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @soylent/platform
+/.vscode/                @soylent/ai-platform
+/.env.example            @soylent/ai-platform
+/src/                    @soylent/ai-platform

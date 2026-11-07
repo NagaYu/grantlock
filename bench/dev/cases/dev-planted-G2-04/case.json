@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G2-04",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g2_toolsets",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".vscode/mcp.json",
+      "component": "github",
+      "note": "toolsets pull_requests,actions added"
+    }
+  ],
+  "expected_labels": [],
+  "description": "triage-agent のスナップショット。レビュー済み grantlock.json の上に G2 のリスクを仕込んである。"
+}

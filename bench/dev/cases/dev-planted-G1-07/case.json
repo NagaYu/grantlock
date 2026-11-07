@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G1-07",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g1_with_literal",
+  "planted": [
+    {
+      "class": "G1",
+      "file": ".github/workflows/docker.yml",
+      "component": "Container image/image",
+      "note": "registry PAT as literal action input"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of onboarding-buddy with one planted G1 risk on top of a reviewed grantlock.json."
+}

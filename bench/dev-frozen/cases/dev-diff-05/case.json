@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-05",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "g7_prod_secret",
+  "planted": [
+    {
+      "class": "G7",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "new secret in production deploy"
+    }
+  ],
+  "expected_labels": [
+    "G7"
+  ],
+  "description": "Before/after pair for sales-ops-agent; after/grantlock.json is the lock committed for before/."
+}

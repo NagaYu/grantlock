@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G7-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "c_new_env_cred",
+  "planted": [
+    {
+      "class": "G7",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "new credential for an existing service"
+    }
+  ],
+  "expected_labels": [],
+  "description": "triage-agent のスナップショット。レビュー済み grantlock.json の上に G7 のリスクを仕込んである。"
+}

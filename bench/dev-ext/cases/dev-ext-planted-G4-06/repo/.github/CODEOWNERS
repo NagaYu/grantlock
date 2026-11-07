@@ -1,0 +1,6 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @globex/platform
+/deploy/             @globex/platform
+/infra/              @globex/infra
+/.env.example        @globex/ml-infra
+/infra/iam.tf

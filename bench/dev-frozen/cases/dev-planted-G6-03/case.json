@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G6-03",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g6_gcp_sa_key",
+  "planted": [
+    {
+      "class": "G6",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "WIF replaced by SA key JSON"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of research-scout with one planted G6 risk on top of a reviewed grantlock.json."
+}

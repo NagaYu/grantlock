@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G6-08",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g6_npm_publish",
+  "planted": [
+    {
+      "class": "G6",
+      "file": ".github/workflows/publish-npm.yml",
+      "component": "Publish SDK/npm",
+      "note": "long-lived npm token"
+    }
+  ],
+  "expected_labels": [],
+  "description": "triage-agent のスナップショット。レビュー済み grantlock.json の上に G6 のリスクを仕込んである。"
+}

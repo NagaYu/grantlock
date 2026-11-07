@@ -1,0 +1,38 @@
+# billing-concierge の CI。
+# 権限は最小限にすること（SECURITY.md 参照）。
+name: CI
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: Python をセットアップ
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: 依存関係をインストール
+      run: pip install -e '.[test]'
+    - name: ユニットテストを実行
+      run: pytest -q --cov=src --cov-report=xml
+    - name: カバレッジをアップロード
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: coverage.xml
+      if: ${{ github.event_name == 'push' }}
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: 静的解析
+      run: pipx run ruff check .

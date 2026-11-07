@@ -1,0 +1,387 @@
+{
+  "document": "grantlock.lock",
+  "entries": [
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "CODECOV_TOKEN",
+        "provider": "codecov",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "codecov:CODECOV_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".vscode/mcp.json",
+        "id": "mcp_server:.vscode/mcp.json#github",
+        "kind": "mcp_server",
+        "name": "github"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.vscode/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "image",
+          "value": "ghcr.io/github/github-mcp-server"
+        }
+      ],
+      "scope_source": "declared",
+      "scopes": [
+        "toolset:issues",
+        "toolset:repos"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#lint",
+        "kind": "gha_workflow",
+        "name": "CI/lint"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#lint",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#test",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/release.yml",
+        "id": "gha_workflow:.github/workflows/release.yml#publish",
+        "kind": "gha_workflow",
+        "name": "Release/publish"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#publish",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "pypi"
+        },
+        {
+          "kind": "trigger",
+          "value": "release"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "id-token:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".vscode/mcp.json",
+        "id": "mcp_server:.vscode/mcp.json#linear",
+        "kind": "mcp_server",
+        "name": "linear"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oauth:mcp.linear.app",
+        "provider": "linear",
+        "storage": "vault_ref",
+        "type": "oauth"
+      },
+      "identity_id": "linear:oauth:mcp.linear.app",
+      "lifespan": "rotating",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.vscode/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "host",
+          "value": "mcp.linear.app"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".github/workflows/release.yml",
+        "id": "gha_workflow:.github/workflows/release.yml#publish",
+        "kind": "gha_workflow",
+        "name": "Release/publish"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oidc:trusted-publisher",
+        "provider": "pypi",
+        "storage": "federated",
+        "type": "service_account"
+      },
+      "identity_id": "pypi:oidc:trusted-publisher",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "pypi"
+        },
+        {
+          "kind": "trigger",
+          "value": "release"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".vscode/mcp.json",
+        "id": "mcp_server:.vscode/mcp.json#sentry",
+        "kind": "mcp_server",
+        "name": "sentry"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oauth:mcp.sentry.dev",
+        "provider": "sentry",
+        "storage": "vault_ref",
+        "type": "oauth"
+      },
+      "identity_id": "sentry:oauth:mcp.sentry.dev",
+      "lifespan": "rotating",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.vscode/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "host",
+          "value": "mcp.sentry.dev"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    }
+  ],
+  "generator": {
+    "name": "grantlock",
+    "version": "0.1.0"
+  },
+  "schema_version": "1.0"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G1-05",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g1_run_token",
+  "planted": [
+    {
+      "class": "G1",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "bot token in run script"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of onboarding-buddy with one planted G1 risk on top of a reviewed grantlock.json."
+}

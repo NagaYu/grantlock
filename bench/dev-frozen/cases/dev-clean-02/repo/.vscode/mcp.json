@@ -1,0 +1,66 @@
+// release-helper ワークスペースの MCP サーバ
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "github_mcp_pat",
+      "description": "github mcp pat",
+      "password": true
+    }
+  ],
+  "servers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues"
+      }
+    },
+    "brave-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${env:BRAVE_API_KEY}"
+      }
+    },
+    "fetch": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "tavily": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "tavily-mcp@0.2.4"
+      ],
+      "env": {
+        "TAVILY_API_KEY": "${env:TAVILY_API_KEY}"
+      }
+    },
+    "github-remote": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${input:github_mcp_pat}"
+      }
+    }
+  }
+}

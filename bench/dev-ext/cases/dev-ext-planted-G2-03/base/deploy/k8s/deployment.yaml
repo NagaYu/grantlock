@@ -1,0 +1,45 @@
+# data-analyst-agent — production manifests (namespace agents).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-analyst-agent
+  namespace: agents
+  labels:
+    app: data-analyst-agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: data-analyst-agent
+  template:
+    metadata:
+      labels:
+        app: data-analyst-agent
+    spec:
+      serviceAccountName: data-analyst-agent
+      containers:
+      - name: agent
+        image: ghcr.io/acme/data-analyst-agent:4.19.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        - name: MODEL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: agent-config
+              key: model
+        resources:
+          limits:
+            memory: 1Gi

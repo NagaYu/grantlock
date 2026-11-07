@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G5-03",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_cronjob_same_sa",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "deploy/k8s/cronjob.yaml",
+      "component": "research-scout-digest",
+      "note": "cronjob runs as the agent's service account"
+    },
+    {
+      "class": "G5",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "research-scout",
+      "note": "service account now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of research-scout with one planted G5 risk on top of a reviewed grantlock.json."
+}

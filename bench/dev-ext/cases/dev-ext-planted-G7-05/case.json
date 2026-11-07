@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G7-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_new_role_lambda",
+  "planted": [
+    {
+      "class": "G7",
+      "file": "infra/ingest.tf",
+      "component": "aws_lambda_function.ingest",
+      "note": "new role + function"
+    }
+  ],
+  "expected_labels": [],
+  "description": "qa-pilot のスナップショット。レビュー済み grantlock.json の上に G7 のリスクを仕込んである。"
+}

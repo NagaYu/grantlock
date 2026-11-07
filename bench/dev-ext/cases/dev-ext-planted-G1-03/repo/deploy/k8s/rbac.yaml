@@ -1,0 +1,35 @@
+# data-analyst-agent — production manifests (namespace assistant).
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: data-analyst-agent-reader
+  namespace: assistant
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: data-analyst-agent-reader
+  namespace: assistant
+subjects:
+- kind: ServiceAccount
+  name: data-analyst-agent
+  namespace: assistant
+roleRef:
+  kind: Role
+  name: data-analyst-agent-reader
+  apiGroup: rbac.authorization.k8s.io

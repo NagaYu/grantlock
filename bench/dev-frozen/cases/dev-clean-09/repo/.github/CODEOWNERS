@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @tyrell/platform
+/.cursor/                @tyrell/ml-infra
+/.env.example            @tyrell/ml-infra
+/src/                    @tyrell/ml-infra

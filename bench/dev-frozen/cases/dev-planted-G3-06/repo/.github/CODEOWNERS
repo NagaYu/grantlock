@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @umbrella/platform
+/.cursor/                @umbrella/devex
+/.env.example            @umbrella/devex
+/src/                    @umbrella/devex

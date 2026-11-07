@@ -1,0 +1,50 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues",
+        "API_TIMEOUT_MS": "30000",
+        "TOKEN_CACHE_DIR": "./.cache/tokens"
+      }
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://readonly:FAKEpwA1GdZJd334u6BU@db.staging.wayne-ent.internal:5432/onboarding_buddy"
+      ]
+    },
+    "slack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+        "SLACK_TEAM_ID": "T0FJ8KBYKF",
+        "SLACK_CHANNEL_IDS": "C0FJ8KBYKF",
+        "HTTPS_PROXY": "http://proxy.internal:3128"
+      }
+    }
+  }
+}

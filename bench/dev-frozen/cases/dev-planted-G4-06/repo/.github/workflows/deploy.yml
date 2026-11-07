@@ -1,0 +1,28 @@
+# release-helper を OIDC の短期認証でデプロイする（クラウドの鍵は保存しない）。
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://release-helper.tyrell.example
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: クラウド認証情報を設定
+      uses: google-github-actions/auth@v2
+      with:
+        workload_identity_provider: projects/774692714973/locations/global/workloadIdentityPools/github/providers/release-helper
+        service_account: deployer@tyrell-release-helper.iam.gserviceaccount.com
+    - name: デプロイ
+      run: gcloud run deploy release-helper --source . --region us-central1

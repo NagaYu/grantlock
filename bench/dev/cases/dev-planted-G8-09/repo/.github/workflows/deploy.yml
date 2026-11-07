@@ -1,0 +1,30 @@
+# Deploys qa-pilot using short-lived OIDC credentials (no stored cloud keys).
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Configure cloud credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::863953248079:role/qa-pilot-deploy
+        aws-region: ap-northeast-1
+    - name: Deploy
+      run: aws ecs update-service --cluster qa-pilot --service api --force-new-deployment

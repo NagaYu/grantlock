@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @cyberdyne/platform
+/deploy/             @cyberdyne/platform
+/infra/              @cyberdyne/infra
+/.env.example        @cyberdyne/devex

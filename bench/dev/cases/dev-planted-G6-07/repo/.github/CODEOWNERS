@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @initech/platform
+/.mcp.json               @initech/platform
+/.env.example            @initech/platform
+/src/                    @initech/platform

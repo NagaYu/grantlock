@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-13",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "dp_swap_remote",
+  "planted": [
+    {
+      "class": "G8",
+      "file": ".mcp.json",
+      "component": "supabase",
+      "note": "server removed; credential still declared"
+    },
+    {
+      "class": "G7",
+      "file": ".mcp.json",
+      "component": "asana",
+      "note": "new remote server with delegated OAuth"
+    }
+  ],
+  "expected_labels": [
+    "G7",
+    "G8"
+  ],
+  "description": "Before/after pair for onboarding-buddy; after/grantlock.json is the lock committed for before/."
+}

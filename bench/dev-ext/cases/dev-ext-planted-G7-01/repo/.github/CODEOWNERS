@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @wayne-ent/platform
+/deploy/             @wayne-ent/platform
+/infra/              @wayne-ent/infra
+/.env.example        @wayne-ent/agents

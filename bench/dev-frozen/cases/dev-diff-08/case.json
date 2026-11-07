@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-08",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "g3_job_write_all",
+  "planted": [
+    {
+      "class": "G3",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "permissions: write-all on job"
+    }
+  ],
+  "expected_labels": [
+    "G2",
+    "G3"
+  ],
+  "description": "support-copilot の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

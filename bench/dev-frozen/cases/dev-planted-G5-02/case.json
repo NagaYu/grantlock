@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G5-02",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g5_eval_secret_in_ci",
+  "planted": [
+    {
+      "class": "G5",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "eval key reused in CI"
+    },
+    {
+      "class": "G5",
+      "file": ".github/workflows/eval.yml",
+      "component": "Agent eval/eval",
+      "note": "eval key now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "support-copilot のスナップショット。レビュー済み grantlock.json の上に G5 のリスクを仕込んである。"
+}

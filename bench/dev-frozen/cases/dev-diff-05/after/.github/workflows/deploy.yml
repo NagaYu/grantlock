@@ -1,0 +1,30 @@
+# Deploys sales-ops-agent using short-lived OIDC credentials (no stored cloud keys).
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://sales-ops-agent.initech.example
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Configure cloud credentials
+      uses: google-github-actions/auth@v2
+      with:
+        workload_identity_provider: projects/978654975800/locations/global/workloadIdentityPools/github/providers/sales-ops-agent
+        service_account: deployer@initech-sales-ops-agent.iam.gserviceaccount.com
+    - name: Deploy
+      run: gcloud run deploy sales-ops-agent --source . --region us-central1
+      env:
+        DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}

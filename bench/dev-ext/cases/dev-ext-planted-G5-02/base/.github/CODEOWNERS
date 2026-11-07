@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @globex/platform
+/deploy/             @globex/platform
+/infra/              @globex/infra
+/.env.example        @globex/devex

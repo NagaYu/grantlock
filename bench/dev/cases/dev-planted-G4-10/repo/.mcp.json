@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues",
+        "GITHUB_HOST": "https://github.com",
+        "API_TIMEOUT_MS": "30000"
+      }
+    },
+    "atlassian": {
+      "type": "sse",
+      "url": "https://mcp.atlassian.com/v1/sse"
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only",
+        "--project-ref=dydoxxgflpjbswnqmxvt"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}",
+        "HTTPS_PROXY": "http://proxy.internal:3128"
+      }
+    }
+  }
+}

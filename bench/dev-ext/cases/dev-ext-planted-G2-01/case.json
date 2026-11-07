@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G2-01",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_role_verbs",
+  "planted": [
+    {
+      "class": "G2",
+      "file": "deploy/k8s/rbac.yaml",
+      "component": "research-scout-reader",
+      "note": "watch/update added to configmaps rule"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of research-scout with one planted G2 risk on top of a reviewed grantlock.json."
+}

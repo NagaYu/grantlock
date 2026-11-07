@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G3-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_admin_attach",
+  "planted": [
+    {
+      "class": "G3",
+      "file": "infra/runtime.tf",
+      "component": "aws_iam_role_policy_attachment.runtime_admin",
+      "note": "AdministratorAccess attached"
+    }
+  ],
+  "expected_labels": [],
+  "description": "billing-concierge のスナップショット。レビュー済み grantlock.json の上に G3 のリスクを仕込んである。"
+}

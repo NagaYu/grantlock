@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G5-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_second_run_same_sa",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "infra/run.tf",
+      "component": "google_cloud_run_v2_service.admin_ui",
+      "note": "second service runs as the same SA"
+    },
+    {
+      "class": "G5",
+      "file": "infra/run.tf",
+      "component": "google_cloud_run_v2_service.runtime",
+      "note": "SA now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of billing-concierge with one planted G5 risk on top of a reviewed grantlock.json."
+}

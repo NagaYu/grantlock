@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @wayne-ent/platform
+/.vscode/                @wayne-ent/devex
+/.env.example            @wayne-ent/devex
+/src/                    @wayne-ent/devex

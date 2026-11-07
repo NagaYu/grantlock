@@ -1,0 +1,24 @@
+# Manual hotfix deploy
+name: Hotfix
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: クラウド認証情報を設定
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::322004190596:role/release-helper-deploy
+        aws-region: eu-west-1
+    - name: デプロイ
+      run: aws ecs update-service --cluster release-helper --service api --force-new-deployment

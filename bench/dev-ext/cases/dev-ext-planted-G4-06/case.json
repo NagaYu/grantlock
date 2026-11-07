@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G4-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_unowned_file",
+  "planted": [
+    {
+      "class": "G4",
+      "file": "infra/iam.tf",
+      "component": "google_service_account.runtime",
+      "note": "explicit ownerless rule for an IAM file"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of release-helper with one planted G4 risk on top of a reviewed grantlock.json."
+}

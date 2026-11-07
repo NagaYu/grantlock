@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G6-05",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g6_pypi_token",
+  "planted": [
+    {
+      "class": "G6",
+      "file": ".github/workflows/release.yml",
+      "component": "Release/publish",
+      "note": "trusted publishing replaced by API token"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of release-helper with one planted G6 risk on top of a reviewed grantlock.json."
+}

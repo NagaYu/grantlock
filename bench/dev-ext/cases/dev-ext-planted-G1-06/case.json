@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G1-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_var_default",
+  "planted": [
+    {
+      "class": "G1",
+      "file": "infra/variables.tf",
+      "component": "var.openai_api_key",
+      "note": "secret as variable default"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of support-copilot with one planted G1 risk on top of a reviewed grantlock.json."
+}

@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @hooli/platform
+/.mcp.json               @hooli/ml-infra
+/.env.example            @hooli/ml-infra
+/src/                    @hooli/ml-infra

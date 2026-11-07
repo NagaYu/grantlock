@@ -1,0 +1,367 @@
+{
+  "document": "grantlock.lock",
+  "entries": [
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "EVAL_ANTHROPIC_API_KEY",
+        "provider": "anthropic",
+        "storage": "vault_ref",
+        "type": "api_key"
+      },
+      "identity_id": "anthropic:EVAL_ANTHROPIC_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@initech/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @initech/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".github/workflows/deploy.yml",
+        "id": "gha_workflow:.github/workflows/deploy.yml#deploy",
+        "kind": "gha_workflow",
+        "name": "Deploy/deploy"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oidc:secrets.AZURE_CLIENT_ID",
+        "provider": "azure",
+        "storage": "federated",
+        "type": "service_account"
+      },
+      "identity_id": "azure:oidc:secrets.AZURE_CLIENT_ID",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@initech/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @initech/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "environment",
+          "value": "production"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@initech/agents"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @initech/agents",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#github",
+        "kind": "mcp_server",
+        "name": "github"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@initech/agents"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @initech/agents",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "image",
+          "value": "ghcr.io/github/github-mcp-server"
+        }
+      ],
+      "scope_source": "declared",
+      "scopes": [
+        "toolset:issues",
+        "toolset:repos"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#lint",
+        "kind": "gha_workflow",
+        "name": "CI/lint"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#lint",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@initech/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @initech/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#test",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@initech/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @initech/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/deploy.yml",
+        "id": "gha_workflow:.github/workflows/deploy.yml#deploy",
+        "kind": "gha_workflow",
+        "name": "Deploy/deploy"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/deploy.yml#deploy",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@initech/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @initech/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "environment",
+          "value": "production"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "id-token:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/eval.yml#eval",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@initech/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @initech/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    }
+  ],
+  "generator": {
+    "name": "grantlock",
+    "version": "0.1.0"
+  },
+  "schema_version": "1.0"
+}

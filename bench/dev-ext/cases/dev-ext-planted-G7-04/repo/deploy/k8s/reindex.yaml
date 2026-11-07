@@ -1,0 +1,25 @@
+# repo-gardener — production manifests (namespace ai-prod).
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: repo-gardener-reindex
+  namespace: ai-prod
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: repo-gardener-reindex
+  namespace: ai-prod
+spec:
+  schedule: 30 2 * * *
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: repo-gardener-reindex
+          restartPolicy: OnFailure
+          containers:
+          - name: reindex
+            image: ghcr.io/stark-labs/repo-gardener:3.13.1
+            args:
+            - reindex

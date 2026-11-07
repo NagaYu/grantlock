@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G2-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_role_policy_action",
+  "planted": [
+    {
+      "class": "G2",
+      "file": "infra/runtime.tf",
+      "component": "aws_iam_role_policy.runtime",
+      "note": "runtime role gains write/delete"
+    }
+  ],
+  "expected_labels": [],
+  "description": "onboarding-buddy のスナップショット。レビュー済み grantlock.json の上に G2 のリスクを仕込んである。"
+}

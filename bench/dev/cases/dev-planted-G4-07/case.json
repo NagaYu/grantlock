@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G4-07",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g4_drop_mcp_rule",
+  "planted": [
+    {
+      "class": "G4",
+      "file": ".cursor/mcp.json",
+      "component": "github",
+      "note": "CODEOWNERS rule for MCP config removed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of sales-ops-agent with one planted G4 risk on top of a reviewed grantlock.json."
+}

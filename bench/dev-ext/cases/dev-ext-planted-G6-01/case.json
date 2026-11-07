@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G6-01",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "c_aws_static",
+  "planted": [
+    {
+      "class": "G6",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "static IAM user keys for the worker"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of release-helper with one planted G6 risk on top of a reviewed grantlock.json."
+}

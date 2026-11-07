@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @stark-labs/platform
+/.cursor/                @stark-labs/ai-platform
+/.env.example            @stark-labs/ai-platform
+/src/                    @stark-labs/ai-platform

@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @globex/platform
+/.mcp.json               @globex/agents
+/.env.example            @globex/agents
+/src/                    @globex/agents

@@ -1,0 +1,24 @@
+# Nightly evaluation of the agent against the regression set.
+name: Agent eval
+on:
+  schedule:
+  - cron: 17 3 * * *
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    environment: staging
+    timeout-minutes: 60
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Install dependencies
+      run: pip install -e '.[eval]'
+    - name: Run agent evaluation suite
+      run: python -m evals.run --suite regression --report evals/report.json
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.EVAL_ANTHROPIC_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.EVAL_OPENAI_API_KEY }}

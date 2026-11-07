@@ -1,0 +1,40 @@
+# triage-agent — production manifests (namespace ai-prod).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triage-agent
+  namespace: ai-prod
+  labels:
+    app: triage-agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: triage-agent
+  template:
+    metadata:
+      labels:
+        app: triage-agent
+    spec:
+      serviceAccountName: triage-agent
+      containers:
+      - name: agent
+        image: ghcr.io/globex/triage-agent:1.10.3
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        resources:
+          limits:
+            memory: 1Gi

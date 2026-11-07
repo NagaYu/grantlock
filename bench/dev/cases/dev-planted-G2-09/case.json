@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G2-09",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g2_job_pr_write",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "pull-requests: write added to test job"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of qa-pilot with one planted G2 risk on top of a reviewed grantlock.json."
+}

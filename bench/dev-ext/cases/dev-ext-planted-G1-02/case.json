@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G1-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "c_dburl_literal",
+  "planted": [
+    {
+      "class": "G1",
+      "file": "compose.yaml",
+      "component": "agent",
+      "note": "password embedded in DATABASE_URL"
+    }
+  ],
+  "expected_labels": [],
+  "description": "billing-concierge のスナップショット。レビュー済み grantlock.json の上に G1 のリスクを仕込んである。"
+}

@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @soylent/platform
+/.mcp.json               @soylent/agents
+/.env.example            @soylent/agents
+/src/                    @soylent/agents

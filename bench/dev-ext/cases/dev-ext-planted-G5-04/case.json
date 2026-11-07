@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G5-04",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_second_deploy_same_secret",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "docs-assistant-canary",
+      "note": "canary reads the same API key"
+    },
+    {
+      "class": "G5",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "docs-assistant",
+      "note": "key now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of docs-assistant with one planted G5 risk on top of a reviewed grantlock.json."
+}

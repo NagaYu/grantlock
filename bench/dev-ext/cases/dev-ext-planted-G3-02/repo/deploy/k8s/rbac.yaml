@@ -1,0 +1,56 @@
+# qa-pilot の本番マニフェスト（namespace agents-prod）。
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: qa-pilot-reader
+  namespace: agents-prod
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - secrets
+  resourceNames:
+  - llm-keys
+  verbs:
+  - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: qa-pilot-reader
+  namespace: agents-prod
+subjects:
+- kind: ServiceAccount
+  name: qa-pilot
+  namespace: agents-prod
+roleRef:
+  kind: Role
+  name: qa-pilot-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: qa-pilot-admin
+subjects:
+- kind: ServiceAccount
+  name: qa-pilot
+  namespace: agents-prod
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io

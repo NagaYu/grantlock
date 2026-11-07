@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-03",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "d_tags",
+  "planted": [],
+  "expected_labels": [],
+  "description": "Before/after pair for docs-assistant; after/grantlock.json is the lock committed for before/."
+}

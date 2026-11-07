@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-07",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "g6_aws_static_replace",
+  "planted": [
+    {
+      "class": "G6",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "OIDC replaced by static keys"
+    }
+  ],
+  "expected_labels": [
+    "G6",
+    "G7",
+    "G8"
+  ],
+  "description": "Before/after pair for data-analyst-agent; after/grantlock.json is the lock committed for before/."
+}

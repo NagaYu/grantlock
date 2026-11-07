@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G6-03",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_static_secret_ref",
+  "planted": [
+    {
+      "class": "G6",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "repo-gardener",
+      "note": "static AWS keys although IRSA/WI is available"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of repo-gardener with one planted G6 risk on top of a reviewed grantlock.json."
+}

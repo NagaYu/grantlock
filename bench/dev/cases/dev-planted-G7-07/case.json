@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G7-07",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g7_eval_extra",
+  "planted": [
+    {
+      "class": "G7",
+      "file": ".github/workflows/eval.yml",
+      "component": "Agent eval/eval",
+      "note": "judge model key added"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of billing-concierge with one planted G7 risk on top of a reviewed grantlock.json."
+}

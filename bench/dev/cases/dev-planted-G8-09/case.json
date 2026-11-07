@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G8-09",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g8_remove_codecov",
+  "planted": [
+    {
+      "class": "G8",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "coverage upload removed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of qa-pilot with one planted G8 risk on top of a reviewed grantlock.json."
+}

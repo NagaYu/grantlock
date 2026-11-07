@@ -1,0 +1,4 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @stark-labs/platform
+/deploy/             @stark-labs/platform
+/.env.example        @stark-labs/devex

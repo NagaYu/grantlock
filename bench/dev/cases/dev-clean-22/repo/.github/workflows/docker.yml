@@ -1,0 +1,31 @@
+# コンテナイメージをビルドして GHCR に push する。
+name: Container image
+on:
+  push:
+    branches:
+    - main
+    tags:
+    - v*
+permissions:
+  contents: read
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: レジストリにログイン
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: イメージをビルドして push
+      uses: docker/build-push-action@v6
+      with:
+        push: true
+        tags: ghcr.io/umbrella/sales-ops-agent:latest

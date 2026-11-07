@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G8-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_drop_lambda",
+  "planted": [
+    {
+      "class": "G8",
+      "file": "infra/runtime.tf",
+      "component": "aws_lambda_function.runtime",
+      "note": "function removed; role remains"
+    }
+  ],
+  "expected_labels": [],
+  "description": "sales-ops-agent のスナップショット。レビュー済み grantlock.json の上に G8 のリスクを仕込んである。"
+}

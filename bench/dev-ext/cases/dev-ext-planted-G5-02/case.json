@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G5-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "c_shared_env_file",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "compose.yaml",
+      "component": "agent",
+      "note": "shared env_file"
+    },
+    {
+      "class": "G5",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "shared env_file"
+    }
+  ],
+  "expected_labels": [],
+  "description": "sales-ops-agent のスナップショット。レビュー済み grantlock.json の上に G5 のリスクを仕込んである。"
+}

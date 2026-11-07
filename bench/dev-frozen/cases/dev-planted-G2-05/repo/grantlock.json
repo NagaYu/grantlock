@@ -1,0 +1,669 @@
+{
+  "document": "grantlock.lock",
+  "entries": [
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "EVAL_ANTHROPIC_API_KEY",
+        "provider": "anthropic",
+        "storage": "vault_ref",
+        "type": "api_key"
+      },
+      "identity_id": "anthropic:EVAL_ANTHROPIC_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "BRAVE_API_KEY",
+        "provider": "brave",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "brave:BRAVE_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#brave-search",
+        "kind": "mcp_server",
+        "name": "brave-search"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "BRAVE_API_KEY",
+        "provider": "brave",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "brave:BRAVE_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "package",
+          "value": "@modelcontextprotocol/server-brave-search"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "CODECOV_TOKEN",
+        "provider": "codecov",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "codecov:CODECOV_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#github",
+        "kind": "mcp_server",
+        "name": "github"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "host",
+          "value": "github.com"
+        },
+        {
+          "kind": "image",
+          "value": "ghcr.io/github/github-mcp-server"
+        }
+      ],
+      "scope_source": "declared",
+      "scopes": [
+        "toolset:issues",
+        "toolset:repos"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#lint",
+        "kind": "gha_workflow",
+        "name": "CI/lint"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#lint",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#test",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/docker.yml",
+        "id": "gha_workflow:.github/workflows/docker.yml#image",
+        "kind": "gha_workflow",
+        "name": "Container image/image"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/docker.yml#image",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "packages:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/eval.yml#eval",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/release.yml",
+        "id": "gha_workflow:.github/workflows/release.yml#publish",
+        "kind": "gha_workflow",
+        "name": "Release/publish"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/release.yml#publish",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "pypi"
+        },
+        {
+          "kind": "trigger",
+          "value": "release"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "id-token:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "NOTION_TOKEN",
+        "provider": "notion",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "notion:NOTION_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#notion",
+        "kind": "mcp_server",
+        "name": "notion"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "NOTION_TOKEN",
+        "provider": "notion",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "notion:NOTION_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "package",
+          "value": "@notionhq/notion-mcp-server"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".github/workflows/release.yml",
+        "id": "gha_workflow:.github/workflows/release.yml#publish",
+        "kind": "gha_workflow",
+        "name": "Release/publish"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oidc:trusted-publisher",
+        "provider": "pypi",
+        "storage": "federated",
+        "type": "service_account"
+      },
+      "identity_id": "pypi:oidc:trusted-publisher",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@wayne-ent/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @wayne-ent/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "pypi"
+        },
+        {
+          "kind": "trigger",
+          "value": "release"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "TAVILY_API_KEY",
+        "provider": "tavily",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "tavily:TAVILY_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#tavily",
+        "kind": "mcp_server",
+        "name": "tavily"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "TAVILY_API_KEY",
+        "provider": "tavily",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "tavily:TAVILY_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@wayne-ent/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @wayne-ent/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "package",
+          "value": "tavily-mcp@0.2.4"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    }
+  ],
+  "generator": {
+    "name": "grantlock",
+    "version": "0.1.0"
+  },
+  "schema_version": "1.0"
+}

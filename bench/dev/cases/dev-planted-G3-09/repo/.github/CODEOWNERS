@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @soylent/platform
+/.mcp.json               @soylent/agents
+/.env.example            @soylent/agents
+/src/                    @soylent/agents

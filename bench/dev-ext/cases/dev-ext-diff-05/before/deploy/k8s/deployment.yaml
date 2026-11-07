@@ -1,0 +1,45 @@
+# repo-gardener の本番マニフェスト（namespace agents-prod）。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: repo-gardener
+  namespace: agents-prod
+  labels:
+    app: repo-gardener
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: repo-gardener
+  template:
+    metadata:
+      labels:
+        app: repo-gardener
+    spec:
+      serviceAccountName: repo-gardener
+      containers:
+      - name: agent
+        image: ghcr.io/initech/repo-gardener:4.5.6
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        - name: MODEL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: agent-config
+              key: model
+        resources:
+          limits:
+            memory: 1Gi

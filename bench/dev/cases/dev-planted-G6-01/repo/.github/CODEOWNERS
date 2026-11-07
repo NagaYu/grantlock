@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @acme/platform
+/.mcp.json               @acme/ai-platform
+/.env.example            @acme/ai-platform
+/src/                    @acme/ai-platform

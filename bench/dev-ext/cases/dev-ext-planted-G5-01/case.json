@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G5-01",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "c_worker_reuses_key",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "worker reuses the agent's API key"
+    },
+    {
+      "class": "G5",
+      "file": "compose.yaml",
+      "component": "agent",
+      "note": "key now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of qa-pilot with one planted G5 risk on top of a reviewed grantlock.json."
+}

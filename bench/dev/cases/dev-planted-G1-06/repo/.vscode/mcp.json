@@ -1,0 +1,67 @@
+// billing-concierge ワークスペースの MCP サーバ
+{
+  "inputs": [],
+  "servers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues",
+        "GITHUB_HOST": "https://github.com",
+        "API_TIMEOUT_MS": "30000"
+      }
+    },
+    "notion": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "${env:NOTION_TOKEN}"
+      }
+    },
+    "postgres": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://readonly:${env:PG_READONLY_PASSWORD}@db.staging.hooli.internal:5432/billing_concierge"
+      ]
+    },
+    "supabase": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only",
+        "--project-ref=qsyomtozgmjxavwevpnm"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${env:SUPABASE_ACCESS_TOKEN}"
+      }
+    },
+    "openai-bridge": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "openai-mcp-bridge",
+        "--api-key",
+        "sk-FAKEDYJHbM5cffzmITB0IeKsXfTlmfrR9IlCWWrHlW3w"
+      ]
+    }
+  }
+}

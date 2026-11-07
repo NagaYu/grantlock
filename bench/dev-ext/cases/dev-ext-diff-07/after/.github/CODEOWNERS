@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @initech/platform
+/deploy/             @initech/platform
+/infra/              @initech/infra
+/.env.example        @initech/ai-platform

@@ -1,0 +1,39 @@
+# support-copilot — production manifests (namespace ai-prod).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: support-copilot
+  namespace: ai-prod
+  labels:
+    app: support-copilot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: support-copilot
+  template:
+    metadata:
+      labels:
+        app: support-copilot
+    spec:
+      containers:
+      - name: agent
+        image: ghcr.io/cyberdyne/support-copilot:2.6.7
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        resources:
+          limits:
+            memory: 1Gi

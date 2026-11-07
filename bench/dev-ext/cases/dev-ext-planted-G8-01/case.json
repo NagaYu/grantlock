@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G8-01",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "c_drop_env",
+  "planted": [
+    {
+      "class": "G8",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "worker no longer uses the bot token"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of billing-concierge with one planted G8 risk on top of a reviewed grantlock.json."
+}

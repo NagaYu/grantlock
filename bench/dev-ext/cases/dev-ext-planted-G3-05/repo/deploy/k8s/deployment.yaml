@@ -1,0 +1,40 @@
+# billing-concierge の本番マニフェスト（namespace agents）。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: billing-concierge
+  namespace: agents
+  labels:
+    app: billing-concierge
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: billing-concierge
+  template:
+    metadata:
+      labels:
+        app: billing-concierge
+    spec:
+      serviceAccountName: billing-concierge
+      containers:
+      - name: agent
+        image: ghcr.io/umbrella/billing-concierge:2.0.7
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        resources:
+          limits:
+            memory: 1Gi

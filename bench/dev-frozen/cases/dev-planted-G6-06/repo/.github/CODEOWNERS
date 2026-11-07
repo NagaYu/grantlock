@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @wayne-ent/platform
+/.mcp.json               @wayne-ent/platform
+/.env.example            @wayne-ent/platform
+/src/                    @wayne-ent/platform

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G4-09",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g4_narrow_github_rule",
+  "planted": [
+    {
+      "class": "G4",
+      "file": ".github/workflows/eval.yml",
+      "component": "Agent eval/eval",
+      "note": "rule narrowed to ci.yml only"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of repo-gardener with one planted G4 risk on top of a reviewed grantlock.json."
+}

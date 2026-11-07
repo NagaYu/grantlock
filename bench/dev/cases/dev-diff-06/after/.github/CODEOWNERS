@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @cyberdyne/platform
+/.mcp.json               @cyberdyne/platform
+/.env.example            @cyberdyne/platform
+/src/                    @cyberdyne/platform

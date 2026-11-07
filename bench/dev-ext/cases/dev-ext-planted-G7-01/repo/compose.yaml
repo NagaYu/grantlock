@@ -1,0 +1,44 @@
+# Local stack for docs-assistant: agent API, worker, Postgres, Redis.
+# Secrets come from the environment or Docker secrets; never hard-code them.
+services:
+  agent:
+    image: ghcr.io/wayne-ent/docs-assistant:2.5.4
+    ports:
+    - 8080:8080
+    depends_on:
+    - db
+    - redis
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      LOG_LEVEL: info
+      DATABASE_URL: postgres://agent:${POSTGRES_PASSWORD}@db:5432/agent
+      REDIS_HOST: redis
+  worker:
+    image: ghcr.io/wayne-ent/docs-assistant:2.5.4
+    command:
+    - python
+    - -m
+    - docs_assistant.worker
+    environment:
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN}
+      QUEUE_URL: redis://redis:6379/0
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
+    secrets:
+    - pg_password
+    volumes:
+    - pgdata:/var/lib/postgresql/data
+  redis:
+    image: redis:7-alpine
+  search:
+    image: ghcr.io/acme/search-mcp:0.3
+    environment:
+      TAVILY_API_KEY: ${TAVILY_API_KEY}
+      PORT: '9000'
+secrets:
+  pg_password:
+    file: ./secrets/pg_password.txt
+volumes:
+  pgdata: {}

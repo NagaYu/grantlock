@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @initech/platform
+/deploy/             @initech/platform
+/infra/              @initech/infra
+/.env.example        @initech/ai-platform

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G8-10",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g8_remove_deploy_wf",
+  "planted": [
+    {
+      "class": "G8",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "deploy workflow removed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "research-scout のスナップショット。レビュー済み grantlock.json の上に G8 のリスクを仕込んである。"
+}

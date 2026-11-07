@@ -1,0 +1,16 @@
+name: Backup
+on:
+  schedule:
+  - cron: 0 2 * * *
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sync
+      run: aws s3 sync s3://data-analyst-agent-data s3://data-analyst-agent-backup
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.BACKUP_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.BACKUP_AWS_SECRET_ACCESS_KEY }}

@@ -1,0 +1,327 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.manifest",
+  "split": "dev-ext",
+  "seed": 20261121,
+  "counts": {
+    "planted": 48,
+    "clean": 12,
+    "diff_pair": 8,
+    "total": 68,
+    "planted_by_class": {
+      "G1": 6,
+      "G2": 6,
+      "G3": 6,
+      "G4": 6,
+      "G5": 6,
+      "G6": 6,
+      "G7": 6,
+      "G8": 6
+    }
+  },
+  "planted_by_surface": {
+    "compose": {
+      "G1": 2,
+      "G4": 2,
+      "G5": 2,
+      "G6": 2,
+      "G7": 2,
+      "G8": 2
+    },
+    "k8s": {
+      "G1": 2,
+      "G2": 3,
+      "G3": 3,
+      "G4": 2,
+      "G5": 2,
+      "G6": 2,
+      "G7": 2,
+      "G8": 2
+    },
+    "terraform": {
+      "G1": 2,
+      "G2": 3,
+      "G3": 3,
+      "G4": 2,
+      "G5": 2,
+      "G6": 2,
+      "G7": 2,
+      "G8": 2
+    }
+  },
+  "cases": [
+    {
+      "case_id": "dev-ext-planted-G1-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G1-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G1-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G1-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G1-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G1-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G2-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G2-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G2-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G2-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G2-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G2-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G3-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G3-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G3-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G3-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G3-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G3-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G4-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G4-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G4-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G4-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G4-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G4-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G5-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G5-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G5-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G5-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G5-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G5-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G6-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G6-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G6-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G6-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G6-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G6-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G7-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G7-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G7-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G7-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G7-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G7-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G8-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G8-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G8-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G8-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G8-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-planted-G8-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-ext-clean-01",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-02",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-03",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-04",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-05",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-06",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-07",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-08",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-09",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-10",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-11",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-clean-12",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-ext-diff-01",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-02",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-03",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-04",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-05",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-06",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-07",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-ext-diff-08",
+      "kind": "diff_pair"
+    }
+  ],
+  "corpus_sha256": "0f5582ee1642557f779b93444f6c5653f15cb92359aa6bcfc1d37352c0244a8d"
+}

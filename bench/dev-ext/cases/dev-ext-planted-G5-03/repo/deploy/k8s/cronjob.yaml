@@ -1,0 +1,19 @@
+# research-scout — production manifests (namespace agents-prod).
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: research-scout-digest
+  namespace: agents-prod
+spec:
+  schedule: 0 6 * * 1-5
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: research-scout
+          restartPolicy: OnFailure
+          containers:
+          - name: digest
+            image: ghcr.io/hooli/research-scout:4.14.5
+            args:
+            - digest

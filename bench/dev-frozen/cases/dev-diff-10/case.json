@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-10",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "g4_delete_codeowners",
+  "planted": [
+    {
+      "class": "G4",
+      "file": ".cursor/mcp.json",
+      "component": "github",
+      "note": "CODEOWNERS deleted"
+    }
+  ],
+  "expected_labels": [
+    "G4"
+  ],
+  "description": "qa-pilot の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

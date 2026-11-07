@@ -1,0 +1,28 @@
+# Deploys repo-gardener using short-lived OIDC credentials (no stored cloud keys).
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://repo-gardener.initech.example
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Configure cloud credentials
+      uses: google-github-actions/auth@v2
+      with:
+        workload_identity_provider: projects/991590044602/locations/global/workloadIdentityPools/github/providers/repo-gardener
+        service_account: deployer@initech-repo-gardener.iam.gserviceaccount.com
+    - name: Deploy
+      run: gcloud run deploy repo-gardener --source . --region us-central1

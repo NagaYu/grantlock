@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @hooli/platform
+/deploy/             @hooli/platform
+/infra/              @hooli/infra
+/.env.example        @hooli/platform

@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @globex/platform
+/.vscode/                @globex/ml-infra
+/.env.example            @globex/ml-infra
+/src/                    @globex/ml-infra

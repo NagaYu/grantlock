@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-04",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "g2_deploy_add",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "deployments: write added to production job"
+    }
+  ],
+  "expected_labels": [
+    "G2"
+  ],
+  "description": "docs-assistant の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

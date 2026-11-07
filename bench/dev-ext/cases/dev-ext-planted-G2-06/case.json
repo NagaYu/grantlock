@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G2-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_gcp_new_member",
+  "planted": [
+    {
+      "class": "G2",
+      "file": "infra/iam.tf",
+      "component": "google_project_iam_member.runtime_storage",
+      "note": "storage.objectAdmin granted to runtime SA"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of repo-gardener with one planted G2 risk on top of a reviewed grantlock.json."
+}

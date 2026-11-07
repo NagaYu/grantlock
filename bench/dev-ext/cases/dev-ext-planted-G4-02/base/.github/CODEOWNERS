@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @cyberdyne/platform
+/deploy/             @cyberdyne/platform
+/infra/              @cyberdyne/infra
+/.env.example        @cyberdyne/platform

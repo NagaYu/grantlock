@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-16",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "dp_rename_job",
+  "planted": [
+    {
+      "class": "G7",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/static-analysis",
+      "note": "new job token"
+    },
+    {
+      "class": "G8",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/lint",
+      "note": "old job token dormant"
+    }
+  ],
+  "expected_labels": [
+    "G7",
+    "G8"
+  ],
+  "description": "release-helper の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

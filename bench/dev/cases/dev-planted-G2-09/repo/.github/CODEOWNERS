@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @cyberdyne/platform
+/.mcp.json               @cyberdyne/ai-platform
+/.env.example            @cyberdyne/ai-platform
+/src/                    @cyberdyne/ai-platform

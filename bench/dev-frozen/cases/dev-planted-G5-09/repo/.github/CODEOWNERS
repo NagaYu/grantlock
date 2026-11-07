@@ -1,0 +1,6 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @wayne-ent/platform
+/.mcp.json               @wayne-ent/devex
+/.env.example            @wayne-ent/devex
+/src/                    @wayne-ent/devex
+/.cursor/                @wayne-ent/devex

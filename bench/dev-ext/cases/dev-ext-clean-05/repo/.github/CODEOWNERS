@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @tyrell/platform
+/deploy/             @tyrell/platform
+/infra/              @tyrell/infra
+/.env.example        @tyrell/devex

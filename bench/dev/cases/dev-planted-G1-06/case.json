@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G1-06",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g1_args_key",
+  "planted": [
+    {
+      "class": "G1",
+      "file": ".vscode/mcp.json",
+      "component": "openai-bridge",
+      "note": "API key passed as CLI argument"
+    }
+  ],
+  "expected_labels": [],
+  "description": "billing-concierge のスナップショット。レビュー済み grantlock.json の上に G1 のリスクを仕込んである。"
+}

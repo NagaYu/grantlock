@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G2-04",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_doc_action",
+  "planted": [
+    {
+      "class": "G2",
+      "file": "infra/deploy.tf",
+      "component": "data.aws_iam_policy_document.deploy",
+      "note": "deploy role gains PassRole"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of data-analyst-agent with one planted G2 risk on top of a reviewed grantlock.json."
+}

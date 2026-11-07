@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G5-09",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g5_second_mcp_file",
+  "planted": [
+    {
+      "class": "G5",
+      "file": ".cursor/mcp.json",
+      "component": "slack",
+      "note": "server copied into a second client config"
+    },
+    {
+      "class": "G5",
+      "file": ".mcp.json",
+      "component": "slack",
+      "note": "credential now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of docs-assistant with one planted G5 risk on top of a reviewed grantlock.json."
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-11",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "g5_second_server_same_pat",
+  "planted": [
+    {
+      "class": "G5",
+      "file": ".cursor/mcp.json",
+      "component": "triage-bot",
+      "note": "reuses github PAT"
+    },
+    {
+      "class": "G5",
+      "file": ".cursor/mcp.json",
+      "component": "github",
+      "note": "PAT now shared"
+    }
+  ],
+  "expected_labels": [
+    "G5"
+  ],
+  "description": "Before/after pair for onboarding-buddy; after/grantlock.json is the lock committed for before/."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G8-01",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g8_remove_server",
+  "planted": [
+    {
+      "class": "G8",
+      "file": ".mcp.json",
+      "component": "slack",
+      "note": "server removed; credential still declared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of onboarding-buddy with one planted G8 risk on top of a reviewed grantlock.json."
+}

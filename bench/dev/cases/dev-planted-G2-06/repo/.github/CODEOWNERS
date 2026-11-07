@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @globex/platform
+/.cursor/                @globex/devex
+/.env.example            @globex/devex
+/src/                    @globex/devex

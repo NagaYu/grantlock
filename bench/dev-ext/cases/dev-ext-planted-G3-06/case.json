@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G3-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_gcp_editor",
+  "planted": [
+    {
+      "class": "G3",
+      "file": "infra/iam.tf",
+      "component": "google_project_iam_member.runtime_editor",
+      "note": "roles/editor on the project"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of repo-gardener with one planted G3 risk on top of a reviewed grantlock.json."
+}

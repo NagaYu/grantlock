@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @hooli/platform
+/deploy/             @hooli/platform
+/infra/              @hooli/infra
+/.env.example        @hooli/devex

@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @umbrella/platform
+/deploy/             @umbrella/platform
+/infra/              @umbrella/infra
+/.env.example        @umbrella/devex

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-05",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "t_access_key",
+  "planted": [
+    {
+      "class": "G6",
+      "file": "infra/ci.tf",
+      "component": "aws_iam_access_key.ci",
+      "note": "IAM user access key although OIDC provider exists"
+    }
+  ],
+  "expected_labels": [
+    "G6",
+    "G7"
+  ],
+  "description": "repo-gardener の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

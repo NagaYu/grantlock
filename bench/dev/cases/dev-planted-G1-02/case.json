@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G1-02",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g1_conn_string",
+  "planted": [
+    {
+      "class": "G1",
+      "file": ".mcp.json",
+      "component": "postgres",
+      "note": "password embedded in connection string argument"
+    }
+  ],
+  "expected_labels": [],
+  "description": "onboarding-buddy のスナップショット。レビュー済み grantlock.json の上に G1 のリスクを仕込んである。"
+}

@@ -1,0 +1,43 @@
+# triage-agent の本番マニフェスト（namespace agents-prod）。
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: triage-agent-reader
+  namespace: agents-prod
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - secrets
+  resourceNames:
+  - llm-keys
+  verbs:
+  - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: triage-agent-reader
+  namespace: agents-prod
+subjects:
+- kind: ServiceAccount
+  name: triage-agent
+  namespace: agents-prod
+roleRef:
+  kind: Role
+  name: triage-agent-reader
+  apiGroup: rbac.authorization.k8s.io

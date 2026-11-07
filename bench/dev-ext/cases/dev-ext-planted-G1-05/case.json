@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G1-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_provider_keys",
+  "planted": [
+    {
+      "class": "G1",
+      "file": "infra/providers.tf",
+      "component": "provider.aws",
+      "note": "static keys written into provider block"
+    }
+  ],
+  "expected_labels": [],
+  "description": "incident-bot のスナップショット。レビュー済み grantlock.json の上に G1 のリスクを仕込んである。"
+}

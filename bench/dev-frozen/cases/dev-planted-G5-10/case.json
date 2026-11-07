@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G5-10",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g5_shared_role",
+  "planted": [
+    {
+      "class": "G5",
+      "file": ".github/workflows/hotfix.yml",
+      "component": "Hotfix/deploy",
+      "note": "same OIDC role as Deploy"
+    },
+    {
+      "class": "G5",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "role now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "repo-gardener のスナップショット。レビュー済み grantlock.json の上に G5 のリスクを仕込んである。"
+}

@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @globex/platform
+/.vscode/                @globex/agents
+/.env.example            @globex/agents
+/src/                    @globex/agents

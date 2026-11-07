@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G4-06",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g4_explicit_unowned",
+  "planted": [
+    {
+      "class": "G4",
+      "file": ".mcp.json",
+      "component": "github",
+      "note": "trailing rule without owners un-owns the MCP config"
+    }
+  ],
+  "expected_labels": [],
+  "description": "release-helper のスナップショット。レビュー済み grantlock.json の上に G4 のリスクを仕込んである。"
+}

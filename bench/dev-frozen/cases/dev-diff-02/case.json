@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-02",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "dp_scope_reduce",
+  "planted": [],
+  "expected_labels": [],
+  "description": "release-helper の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

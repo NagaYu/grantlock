@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G3-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "k_bind_cluster_admin",
+  "planted": [
+    {
+      "class": "G3",
+      "file": "deploy/k8s/rbac.yaml",
+      "component": "qa-pilot-admin",
+      "note": "service account bound to cluster-admin"
+    }
+  ],
+  "expected_labels": [],
+  "description": "qa-pilot のスナップショット。レビュー済み grantlock.json の上に G3 のリスクを仕込んである。"
+}

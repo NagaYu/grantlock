@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G3-02",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g3_admin_role",
+  "planted": [
+    {
+      "class": "G3",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "OIDC role switched to AdministratorAccess"
+    }
+  ],
+  "expected_labels": [],
+  "description": "support-copilot のスナップショット。レビュー済み grantlock.json の上に G3 のリスクを仕込んである。"
+}

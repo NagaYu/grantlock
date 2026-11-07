@@ -1,0 +1,4 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.vscode/                @tyrell/agents
+/.env.example            @tyrell/agents
+/src/                    @tyrell/agents

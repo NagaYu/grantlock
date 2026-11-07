@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G6-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "c_gcp_keyfile",
+  "planted": [
+    {
+      "class": "G6",
+      "file": "compose.yaml",
+      "component": "agent",
+      "note": "service-account key file mounted"
+    }
+  ],
+  "expected_labels": [],
+  "description": "qa-pilot のスナップショット。レビュー済み grantlock.json の上に G6 のリスクを仕込んである。"
+}

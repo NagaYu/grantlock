@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G2-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "k_role_exec",
+  "planted": [
+    {
+      "class": "G2",
+      "file": "deploy/k8s/rbac.yaml",
+      "component": "data-analyst-agent-reader",
+      "note": "pods/exec create added"
+    }
+  ],
+  "expected_labels": [],
+  "description": "data-analyst-agent のスナップショット。レビュー済み grantlock.json の上に G2 のリスクを仕込んである。"
+}

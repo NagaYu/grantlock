@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @soylent/platform
+/.vscode/                @soylent/ml-infra
+/.env.example            @soylent/ml-infra
+/src/                    @soylent/ml-infra

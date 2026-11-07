@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @umbrella/platform
+/.mcp.json               @umbrella/ai-platform
+/.env.example            @umbrella/ai-platform
+/src/                    @umbrella/ai-platform

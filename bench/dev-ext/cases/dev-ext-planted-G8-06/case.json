@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G8-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_drop_run",
+  "planted": [
+    {
+      "class": "G8",
+      "file": "infra/run.tf",
+      "component": "google_cloud_run_v2_service.runtime",
+      "note": "service removed; SA remains"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of triage-agent with one planted G8 risk on top of a reviewed grantlock.json."
+}

@@ -1,0 +1,39 @@
+# Local stack for billing-concierge: agent API, worker, Postgres, Redis.
+# Secrets come from the environment or Docker secrets; never hard-code them.
+services:
+  agent:
+    image: ghcr.io/stark-labs/billing-concierge:3.14.6
+    ports:
+    - 8080:8080
+    depends_on:
+    - db
+    - redis
+    environment:
+      ANTHROPIC_API_KEY: sk-ant-api03-FAKEsDHs9eORHVqZS_TldMTWDqWcP0rLSOSlQ64ysPy4Fi4CQncKxbpTHTDw5Js6tZvRIzPUGVlPEjxdmrQFDTB6OU4jlAA
+      LOG_LEVEL: info
+      DATABASE_URL: postgres://agent:${POSTGRES_PASSWORD}@db:5432/agent
+      REDIS_HOST: redis
+  worker:
+    image: ghcr.io/stark-labs/billing-concierge:3.14.6
+    command:
+    - python
+    - -m
+    - billing_concierge.worker
+    environment:
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN}
+      QUEUE_URL: redis://redis:6379/0
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
+    secrets:
+    - pg_password
+    volumes:
+    - pgdata:/var/lib/postgresql/data
+  redis:
+    image: redis:7-alpine
+secrets:
+  pg_password:
+    file: ./secrets/pg_password.txt
+volumes:
+  pgdata: {}

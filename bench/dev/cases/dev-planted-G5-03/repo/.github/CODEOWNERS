@@ -1,0 +1,6 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @cyberdyne/platform
+/.mcp.json               @cyberdyne/devex
+/.env.example            @cyberdyne/devex
+/src/                    @cyberdyne/devex
+/.cursor/                @cyberdyne/devex

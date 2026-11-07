@@ -1,0 +1,35 @@
+# qa-pilot — production manifests (namespace agents-prod).
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: qa-pilot-reader
+  namespace: agents-prod
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: qa-pilot-reader
+  namespace: agents-prod
+subjects:
+- kind: ServiceAccount
+  name: qa-pilot
+  namespace: agents-prod
+roleRef:
+  kind: Role
+  name: qa-pilot-reader
+  apiGroup: rbac.authorization.k8s.io

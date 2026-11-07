@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G3-05",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g3_snowflake_admin",
+  "planted": [
+    {
+      "class": "G3",
+      "file": ".mcp.json",
+      "component": "snowflake",
+      "note": "agent runs as ACCOUNTADMIN"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of release-helper with one planted G3 risk on top of a reviewed grantlock.json."
+}

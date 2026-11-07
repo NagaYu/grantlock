@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G5-06",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g5_slack_reuse",
+  "planted": [
+    {
+      "class": "G5",
+      "file": ".mcp.json",
+      "component": "standup-bot",
+      "note": "reuses slack bot token"
+    },
+    {
+      "class": "G5",
+      "file": ".mcp.json",
+      "component": "slack",
+      "note": "token now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "support-copilot のスナップショット。レビュー済み grantlock.json の上に G5 のリスクを仕込んである。"
+}

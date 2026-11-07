@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G7-03",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_new_secret_ref",
+  "planted": [
+    {
+      "class": "G7",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "docs-assistant",
+      "note": "new secret key consumed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of docs-assistant with one planted G7 risk on top of a reviewed grantlock.json."
+}

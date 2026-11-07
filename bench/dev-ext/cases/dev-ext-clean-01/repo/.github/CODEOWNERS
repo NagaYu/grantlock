@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @tyrell/platform
+/deploy/             @tyrell/platform
+/infra/              @tyrell/infra
+/.env.example        @tyrell/devex

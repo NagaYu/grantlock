@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G3-01",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g3_job_write_all",
+  "planted": [
+    {
+      "class": "G3",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "permissions: write-all on job"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of data-analyst-agent with one planted G3 risk on top of a reviewed grantlock.json."
+}

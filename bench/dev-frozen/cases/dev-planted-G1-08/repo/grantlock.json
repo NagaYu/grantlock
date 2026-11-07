@@ -1,0 +1,503 @@
+{
+  "document": "grantlock.lock",
+  "entries": [
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "EVAL_ANTHROPIC_API_KEY",
+        "provider": "anthropic",
+        "storage": "vault_ref",
+        "type": "api_key"
+      },
+      "identity_id": "anthropic:EVAL_ANTHROPIC_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#atlassian",
+        "kind": "mcp_server",
+        "name": "atlassian"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oauth:mcp.atlassian.com",
+        "provider": "atlassian",
+        "storage": "vault_ref",
+        "type": "oauth"
+      },
+      "identity_id": "atlassian:oauth:mcp.atlassian.com",
+      "lifespan": "rotating",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "host",
+          "value": "mcp.atlassian.com"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "BRAVE_API_KEY",
+        "provider": "brave",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "brave:BRAVE_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#brave-search",
+        "kind": "mcp_server",
+        "name": "brave-search"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "BRAVE_API_KEY",
+        "provider": "brave",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "brave:BRAVE_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "host",
+          "value": "proxy.internal"
+        },
+        {
+          "kind": "package",
+          "value": "@modelcontextprotocol/server-brave-search"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#github",
+        "kind": "mcp_server",
+        "name": "github"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "image",
+          "value": "ghcr.io/github/github-mcp-server"
+        }
+      ],
+      "scope_source": "declared",
+      "scopes": [
+        "toolset:issues",
+        "toolset:repos"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#lint",
+        "kind": "gha_workflow",
+        "name": "CI/lint"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#lint",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#test",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/docker.yml",
+        "id": "gha_workflow:.github/workflows/docker.yml#image",
+        "kind": "gha_workflow",
+        "name": "Container image/image"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/docker.yml#image",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "packages:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/eval.yml#eval",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@tyrell/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @tyrell/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "SUPABASE_ACCESS_TOKEN",
+        "provider": "supabase",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "supabase:SUPABASE_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#supabase",
+        "kind": "mcp_server",
+        "name": "supabase"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "SUPABASE_ACCESS_TOKEN",
+        "provider": "supabase",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "supabase:SUPABASE_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@tyrell/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @tyrell/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "package",
+          "value": "@supabase/mcp-server-supabase@latest"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    }
+  ],
+  "generator": {
+    "name": "grantlock",
+    "version": "0.1.0"
+  },
+  "schema_version": "1.0"
+}

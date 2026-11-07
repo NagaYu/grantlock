@@ -1,0 +1,31 @@
+# triage-agent を OIDC の短期認証でデプロイする（クラウドの鍵は保存しない）。
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+      deployments: write
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: クラウド認証情報を設定
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::579180733750:role/triage-agent-deploy
+        aws-region: eu-west-1
+    - name: デプロイ
+      run: aws ecs update-service --cluster triage-agent --service api --force-new-deployment

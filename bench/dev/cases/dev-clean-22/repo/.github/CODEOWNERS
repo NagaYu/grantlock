@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @umbrella/platform
+/.mcp.json               @umbrella/ml-infra
+/.env.example            @umbrella/ml-infra
+/src/                    @umbrella/ml-infra

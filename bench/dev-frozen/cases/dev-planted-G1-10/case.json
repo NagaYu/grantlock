@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G1-10",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g1_header_literal",
+  "planted": [
+    {
+      "class": "G1",
+      "file": ".mcp.json",
+      "component": "github-remote",
+      "note": "PAT pasted into Authorization header"
+    }
+  ],
+  "expected_labels": [],
+  "description": "sales-ops-agent のスナップショット。レビュー済み grantlock.json の上に G1 のリスクを仕込んである。"
+}

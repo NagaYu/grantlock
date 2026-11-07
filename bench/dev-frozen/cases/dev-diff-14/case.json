@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-14",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "g2_remove_workflow_perms",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "workflow permissions removed -> implicit default"
+    }
+  ],
+  "expected_labels": [
+    "G2"
+  ],
+  "description": "repo-gardener の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

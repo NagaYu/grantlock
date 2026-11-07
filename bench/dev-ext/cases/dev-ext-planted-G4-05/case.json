@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G4-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_drop_rule",
+  "planted": [
+    {
+      "class": "G4",
+      "file": "infra/runtime.tf",
+      "component": "aws_lambda_function.runtime",
+      "note": "CODEOWNERS rule for infra/ removed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "docs-assistant のスナップショット。レビュー済み grantlock.json の上に G4 のリスクを仕込んである。"
+}

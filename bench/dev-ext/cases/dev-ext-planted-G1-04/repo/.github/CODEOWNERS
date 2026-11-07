@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @umbrella/platform
+/deploy/             @umbrella/platform
+/infra/              @umbrella/infra
+/.env.example        @umbrella/platform

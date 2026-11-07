@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G6-10",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g6_backup_job",
+  "planted": [
+    {
+      "class": "G6",
+      "file": ".github/workflows/backup.yml",
+      "component": "Backup/backup",
+      "note": "static AWS keys in nightly job"
+    }
+  ],
+  "expected_labels": [],
+  "description": "data-analyst-agent のスナップショット。レビュー済み grantlock.json の上に G6 のリスクを仕込んである。"
+}

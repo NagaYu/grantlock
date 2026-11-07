@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @globex/platform
+/.mcp.json               @globex/devex
+/.env.example            @globex/devex
+/src/                    @globex/devex

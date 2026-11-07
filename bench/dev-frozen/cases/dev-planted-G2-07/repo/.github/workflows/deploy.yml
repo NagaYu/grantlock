@@ -1,0 +1,28 @@
+# Deploys support-copilot using short-lived OIDC credentials (no stored cloud keys).
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://support-copilot.stark-labs.example
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Configure cloud credentials
+      uses: google-github-actions/auth@v2
+      with:
+        workload_identity_provider: projects/682691317155/locations/global/workloadIdentityPools/github/providers/support-copilot
+        service_account: deployer@stark-labs-support-copilot.iam.gserviceaccount.com
+    - name: Deploy
+      run: gcloud run deploy support-copilot --source . --region us-central1

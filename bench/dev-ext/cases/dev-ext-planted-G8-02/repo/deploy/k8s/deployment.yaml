@@ -1,0 +1,40 @@
+# onboarding-buddy の本番マニフェスト（namespace agents）。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onboarding-buddy
+  namespace: agents
+  labels:
+    app: onboarding-buddy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: onboarding-buddy
+  template:
+    metadata:
+      labels:
+        app: onboarding-buddy
+    spec:
+      serviceAccountName: onboarding-buddy
+      containers:
+      - name: agent
+        image: ghcr.io/initech/onboarding-buddy:3.17.6
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        resources:
+          limits:
+            memory: 1Gi

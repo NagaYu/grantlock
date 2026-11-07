@@ -1,0 +1,5 @@
+# Owners for deployment and identity configuration
+/compose.yaml        @acme/platform
+/infra/              @acme/infra
+/.env.example        @acme/ml-infra
+/deploy/k8s/rbac.yaml @acme/platform

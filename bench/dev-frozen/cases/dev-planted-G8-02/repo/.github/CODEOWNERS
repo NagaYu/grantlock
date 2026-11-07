@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @hooli/platform
+/.mcp.json               @hooli/devex
+/.env.example            @hooli/devex
+/src/                    @hooli/devex

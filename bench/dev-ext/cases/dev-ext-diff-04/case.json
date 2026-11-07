@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-04",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "k_role_star",
+  "planted": [
+    {
+      "class": "G3",
+      "file": "deploy/k8s/rbac.yaml",
+      "component": "data-analyst-agent-reader",
+      "note": "verbs '*' on configmaps rule"
+    }
+  ],
+  "expected_labels": [
+    "G2",
+    "G3"
+  ],
+  "description": "Before/after pair for data-analyst-agent; after/grantlock.json is the lock committed for before/."
+}

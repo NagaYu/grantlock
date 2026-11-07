@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G6-04",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_legacy_sa_token",
+  "planted": [
+    {
+      "class": "G6",
+      "file": "deploy/k8s/serviceaccount.yaml",
+      "component": "research-scout-token",
+      "note": "legacy long-lived SA token secret"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of research-scout with one planted G6 risk on top of a reviewed grantlock.json."
+}

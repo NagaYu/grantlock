@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G3-06",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g3_gcp_admin_sa",
+  "planted": [
+    {
+      "class": "G3",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "deploys as an admin service account"
+    }
+  ],
+  "expected_labels": [],
+  "description": "research-scout のスナップショット。レビュー済み grantlock.json の上に G3 のリスクを仕込んである。"
+}

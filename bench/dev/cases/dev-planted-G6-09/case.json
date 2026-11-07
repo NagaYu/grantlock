@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G6-09",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g6_aws_static_replace",
+  "planted": [
+    {
+      "class": "G6",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "OIDC replaced by static keys"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of sales-ops-agent with one planted G6 risk on top of a reviewed grantlock.json."
+}

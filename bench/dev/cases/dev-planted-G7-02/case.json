@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G7-02",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g7_prod_secret",
+  "planted": [
+    {
+      "class": "G7",
+      "file": ".github/workflows/deploy.yml",
+      "component": "Deploy/deploy",
+      "note": "new secret in production deploy"
+    }
+  ],
+  "expected_labels": [],
+  "description": "qa-pilot のスナップショット。レビュー済み grantlock.json の上に G7 のリスクを仕込んである。"
+}

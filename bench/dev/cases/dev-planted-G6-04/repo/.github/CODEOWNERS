@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @tyrell/platform
+/.mcp.json               @tyrell/agents
+/.env.example            @tyrell/agents
+/src/                    @tyrell/agents

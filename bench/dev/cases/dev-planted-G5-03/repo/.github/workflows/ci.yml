@@ -1,0 +1,32 @@
+# Continuous integration for qa-pilot.
+# Keep permissions minimal; see SECURITY.md.
+name: CI
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: pip install -e '.[test]'
+    - name: Run unit tests
+      run: pytest -q --cov=src --cov-report=xml
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Lint
+      run: pipx run ruff check .

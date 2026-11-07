@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G2-03",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g2_remove_workflow_perms",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/test",
+      "note": "workflow permissions removed -> implicit default"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of incident-bot with one planted G2 risk on top of a reviewed grantlock.json."
+}

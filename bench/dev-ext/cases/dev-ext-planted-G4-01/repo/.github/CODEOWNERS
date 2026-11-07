@@ -1,0 +1,4 @@
+# Owners for deployment and identity configuration
+/deploy/             @tyrell/platform
+/infra/              @tyrell/infra
+/.env.example        @tyrell/ml-infra

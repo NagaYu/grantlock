@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @soylent/platform
+/.cursor/                @soylent/ml-infra
+/.env.example            @soylent/ml-infra
+/src/                    @soylent/ml-infra

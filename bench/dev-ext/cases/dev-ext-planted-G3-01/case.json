@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G3-01",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_role_star",
+  "planted": [
+    {
+      "class": "G3",
+      "file": "deploy/k8s/rbac.yaml",
+      "component": "support-copilot-reader",
+      "note": "verbs '*' on configmaps rule"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of support-copilot with one planted G3 risk on top of a reviewed grantlock.json."
+}

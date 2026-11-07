@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-06",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "c_env_literal",
+  "planted": [
+    {
+      "class": "G1",
+      "file": "compose.yaml",
+      "component": "agent",
+      "note": "API key pasted into service environment"
+    }
+  ],
+  "expected_labels": [
+    "G1"
+  ],
+  "description": "Before/after pair for billing-concierge; after/grantlock.json is the lock committed for before/."
+}

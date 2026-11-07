@@ -1,0 +1,60 @@
+// MCP servers for the docs-assistant workspace
+{
+  "inputs": [],
+  "servers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues",
+        "API_TIMEOUT_MS": "30000"
+      }
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./docs",
+        "./runbooks"
+      ]
+    },
+    "supabase": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only",
+        "--project-ref=vyjfkgxptbhalqyidoij"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${env:SUPABASE_ACCESS_TOKEN}"
+      }
+    },
+    "datadog": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@winor30/mcp-server-datadog"
+      ],
+      "env": {
+        "DATADOG_API_KEY": "${env:DATADOG_API_KEY}",
+        "DATADOG_APP_KEY": "${env:DATADOG_APP_KEY}",
+        "DATADOG_SITE": "datadoghq.com"
+      }
+    }
+  }
+}

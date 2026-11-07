@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-09",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "g3_toolsets_all",
+  "planted": [
+    {
+      "class": "G3",
+      "file": ".vscode/mcp.json",
+      "component": "github",
+      "note": "GITHUB_TOOLSETS=all"
+    }
+  ],
+  "expected_labels": [
+    "G2",
+    "G3"
+  ],
+  "description": "Before/after pair for incident-bot; after/grantlock.json is the lock committed for before/."
+}

@@ -1,0 +1,30 @@
+# support-copilot を OIDC の短期認証でデプロイする（クラウドの鍵は保存しない）。
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+    - name: クラウド認証情報を設定
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::589246818534:role/AdministratorAccess
+        aws-region: us-east-1
+    - name: デプロイ
+      run: aws ecs update-service --cluster support-copilot --service api --force-new-deployment

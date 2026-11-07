@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G8-03",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_drop_sa",
+  "planted": [
+    {
+      "class": "G8",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "support-copilot",
+      "note": "deployment stops using the federated SA"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of support-copilot with one planted G8 risk on top of a reviewed grantlock.json."
+}

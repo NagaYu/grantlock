@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G1-03",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_env_literal",
+  "planted": [
+    {
+      "class": "G1",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "data-analyst-agent",
+      "note": "bot token as literal env value"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of data-analyst-agent with one planted G1 risk on top of a reviewed grantlock.json."
+}

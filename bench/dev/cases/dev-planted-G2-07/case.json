@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G2-07",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g2_docker_attest",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".github/workflows/docker.yml",
+      "component": "Container image/image",
+      "note": "id-token/attestations write added"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of support-copilot with one planted G2 risk on top of a reviewed grantlock.json."
+}

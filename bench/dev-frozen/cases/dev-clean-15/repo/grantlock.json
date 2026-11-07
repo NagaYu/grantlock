@@ -1,0 +1,537 @@
+{
+  "document": "grantlock.lock",
+  "entries": [
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "EVAL_ANTHROPIC_API_KEY",
+        "provider": "anthropic",
+        "storage": "vault_ref",
+        "type": "api_key"
+      },
+      "identity_id": "anthropic:EVAL_ANTHROPIC_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".github/workflows/deploy.yml",
+        "id": "gha_workflow:.github/workflows/deploy.yml#deploy",
+        "kind": "gha_workflow",
+        "name": "Deploy/deploy"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oidc:arn:aws:iam::328415891986:role/billing-concierge-deploy",
+        "provider": "aws",
+        "storage": "federated",
+        "type": "service_account"
+      },
+      "identity_id": "aws:oidc:arn:aws:iam::328415891986:role/billing-concierge-deploy",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "environment",
+          "value": "production"
+        },
+        {
+          "kind": "role",
+          "value": "billing-concierge-deploy"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "declared",
+      "scopes": [
+        "role:billing-concierge-deploy"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@stark-labs/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @stark-labs/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#github",
+        "kind": "mcp_server",
+        "name": "github"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "github",
+        "storage": "env",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_PERSONAL_ACCESS_TOKEN",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@stark-labs/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @stark-labs/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "image",
+          "value": "ghcr.io/github/github-mcp-server"
+        }
+      ],
+      "scope_source": "declared",
+      "scopes": [
+        "toolset:issues",
+        "toolset:repos"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#lint",
+        "kind": "gha_workflow",
+        "name": "CI/lint"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#lint",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/ci.yml",
+        "id": "gha_workflow:.github/workflows/ci.yml#test",
+        "kind": "gha_workflow",
+        "name": "CI/test"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/ci.yml#test",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "pull_request"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/deploy.yml",
+        "id": "gha_workflow:.github/workflows/deploy.yml#deploy",
+        "kind": "gha_workflow",
+        "name": "Deploy/deploy"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/deploy.yml#deploy",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "environment",
+          "value": "production"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "id-token:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/docker.yml",
+        "id": "gha_workflow:.github/workflows/docker.yml#image",
+        "kind": "gha_workflow",
+        "name": "Container image/image"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/docker.yml#image",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "branch",
+          "value": "main"
+        },
+        {
+          "kind": "trigger",
+          "value": "push"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read",
+        "packages:write"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".github/workflows/eval.yml",
+        "id": "gha_workflow:.github/workflows/eval.yml#eval",
+        "kind": "gha_workflow",
+        "name": "Agent eval/eval"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "GITHUB_TOKEN",
+        "provider": "github",
+        "storage": "vault_ref",
+        "type": "token"
+      },
+      "identity_id": "github:GITHUB_TOKEN@.github/workflows/eval.yml#eval",
+      "lifespan": "ephemeral",
+      "owner": {
+        "line": 2,
+        "owners": [
+          "@stark-labs/platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.github/ @stark-labs/platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "environment",
+          "value": "staging"
+        },
+        {
+          "kind": "trigger",
+          "value": "schedule"
+        },
+        {
+          "kind": "trigger",
+          "value": "workflow_dispatch"
+        }
+      ],
+      "scope_source": "explicit",
+      "scopes": [
+        "contents:read"
+      ],
+      "scopes_known": true
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#linear",
+        "kind": "mcp_server",
+        "name": "linear"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "oauth:mcp.linear.app",
+        "provider": "linear",
+        "storage": "vault_ref",
+        "type": "oauth"
+      },
+      "identity_id": "linear:oauth:mcp.linear.app",
+      "lifespan": "rotating",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@stark-labs/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @stark-labs/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "host",
+          "value": "mcp.linear.app"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".env.example",
+        "id": "env_decl:.env.example#decl",
+        "kind": "env_decl",
+        "name": ".env.example"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "TAVILY_API_KEY",
+        "provider": "tavily",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "tavily:TAVILY_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 4,
+        "owners": [
+          "@stark-labs/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.env.example @stark-labs/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    },
+    {
+      "component": {
+        "file": ".cursor/mcp.json",
+        "id": "mcp_server:.cursor/mcp.json#tavily",
+        "kind": "mcp_server",
+        "name": "tavily"
+      },
+      "context": {
+        "federation_available": false,
+        "reason": null
+      },
+      "credential": {
+        "format": null,
+        "name": "TAVILY_API_KEY",
+        "provider": "tavily",
+        "storage": "env",
+        "type": "api_key"
+      },
+      "identity_id": "tavily:TAVILY_API_KEY",
+      "lifespan": "long_lived",
+      "owner": {
+        "line": 3,
+        "owners": [
+          "@stark-labs/ai-platform"
+        ],
+        "rule": ".github/CODEOWNERS: /.cursor/ @stark-labs/ai-platform",
+        "source": "codeowners"
+      },
+      "resources": [
+        {
+          "kind": "package",
+          "value": "tavily-mcp@0.2.4"
+        }
+      ],
+      "scope_source": "unknown",
+      "scopes": [],
+      "scopes_known": false
+    }
+  ],
+  "generator": {
+    "name": "grantlock",
+    "version": "0.1.0"
+  },
+  "schema_version": "1.0"
+}

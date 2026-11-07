@@ -1,0 +1,45 @@
+# data-analyst-agent の本番マニフェスト（namespace agents-prod）。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-analyst-agent
+  namespace: agents-prod
+  labels:
+    app: data-analyst-agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: data-analyst-agent
+  template:
+    metadata:
+      labels:
+        app: data-analyst-agent
+    spec:
+      serviceAccountName: data-analyst-agent
+      containers:
+      - name: agent
+        image: ghcr.io/cyberdyne/data-analyst-agent:1.16.2
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        - name: MODEL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: agent-config
+              key: model
+        resources:
+          limits:
+            memory: 1Gi

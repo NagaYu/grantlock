@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G5-05",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "t_ecs_same_role",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "infra/runtime.tf",
+      "component": "aws_ecs_task_definition.runtime",
+      "note": "ECS task reuses the lambda role"
+    },
+    {
+      "class": "G5",
+      "file": "infra/runtime.tf",
+      "component": "aws_lambda_function.runtime",
+      "note": "role now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "qa-pilot のスナップショット。レビュー済み grantlock.json の上に G5 のリスクを仕込んである。"
+}

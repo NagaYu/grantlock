@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @initech/platform
+/.cursor/                @initech/agents
+/.env.example            @initech/agents
+/src/                    @initech/agents

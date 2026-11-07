@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-clean-01",
+  "split": "dev",
+  "kind": "clean",
+  "lang": "en",
+  "variant": "clean",
+  "planted": [],
+  "expected_labels": [],
+  "description": "Snapshot of triage-agent: least-privilege, fully declared, lockfile in sync."
+}

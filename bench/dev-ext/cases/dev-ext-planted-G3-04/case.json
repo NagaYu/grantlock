@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G3-04",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_star_policy",
+  "planted": [
+    {
+      "class": "G3",
+      "file": "infra/runtime.tf",
+      "component": "aws_iam_role_policy.runtime",
+      "note": "Action * / Resource * statement"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of triage-agent with one planted G3 risk on top of a reviewed grantlock.json."
+}

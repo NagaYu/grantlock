@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G2-03",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_new_binding",
+  "planted": [
+    {
+      "class": "G2",
+      "file": "deploy/k8s/rbac.yaml",
+      "component": "data-analyst-agent-jobs",
+      "note": "new Role bound to the existing service account"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of data-analyst-agent with one planted G2 risk on top of a reviewed grantlock.json."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G2-08",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g2_lint_checks_write",
+  "planted": [
+    {
+      "class": "G2",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/lint",
+      "note": "checks: write added to lint job"
+    }
+  ],
+  "expected_labels": [],
+  "description": "release-helper のスナップショット。レビュー済み grantlock.json の上に G2 のリスクを仕込んである。"
+}

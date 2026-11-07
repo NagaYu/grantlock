@@ -1,0 +1,5 @@
+# デプロイ設定と身分設定のオーナー
+/compose.yaml        @wayne-ent/platform
+/deploy/             @wayne-ent/platform
+/infra/              @wayne-ent/infra
+/.env.example        @wayne-ent/ai-platform

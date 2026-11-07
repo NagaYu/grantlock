@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-08",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "k_cronjob_same_sa",
+  "planted": [
+    {
+      "class": "G5",
+      "file": "deploy/k8s/cronjob.yaml",
+      "component": "sales-ops-agent-digest",
+      "note": "cronjob runs as the agent's service account"
+    },
+    {
+      "class": "G5",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "sales-ops-agent",
+      "note": "service account now shared"
+    }
+  ],
+  "expected_labels": [
+    "G5"
+  ],
+  "description": "sales-ops-agent の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}

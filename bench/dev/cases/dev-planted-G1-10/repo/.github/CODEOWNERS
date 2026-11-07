@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @stark-labs/platform
+/.mcp.json               @stark-labs/platform
+/.env.example            @stark-labs/platform
+/src/                    @stark-labs/platform

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G5-01",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g5_second_server_same_pat",
+  "planted": [
+    {
+      "class": "G5",
+      "file": ".vscode/mcp.json",
+      "component": "triage-bot",
+      "note": "reuses github PAT"
+    },
+    {
+      "class": "G5",
+      "file": ".vscode/mcp.json",
+      "component": "github",
+      "note": "PAT now shared"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of release-helper with one planted G5 risk on top of a reviewed grantlock.json."
+}

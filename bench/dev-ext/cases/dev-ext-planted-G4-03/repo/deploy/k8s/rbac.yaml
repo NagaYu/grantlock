@@ -1,0 +1,43 @@
+# release-helper — production manifests (namespace agents).
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: release-helper-reader
+  namespace: agents
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - secrets
+  resourceNames:
+  - llm-keys
+  verbs:
+  - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: release-helper-reader
+  namespace: agents
+subjects:
+- kind: ServiceAccount
+  name: release-helper
+  namespace: agents
+roleRef:
+  kind: Role
+  name: release-helper-reader
+  apiGroup: rbac.authorization.k8s.io

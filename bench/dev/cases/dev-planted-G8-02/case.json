@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G8-02",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "g8_remove_eval_wf",
+  "planted": [
+    {
+      "class": "G8",
+      "file": ".github/workflows/eval.yml",
+      "component": "Agent eval/eval",
+      "note": "eval workflow deleted"
+    }
+  ],
+  "expected_labels": [],
+  "description": "research-scout のスナップショット。レビュー済み grantlock.json の上に G8 のリスクを仕込んである。"
+}

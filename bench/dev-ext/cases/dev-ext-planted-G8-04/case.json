@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G8-04",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_drop_secret_ref",
+  "planted": [
+    {
+      "class": "G8",
+      "file": "deploy/k8s/deployment.yaml",
+      "component": "data-analyst-agent",
+      "note": "slack token no longer consumed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of data-analyst-agent with one planted G8 risk on top of a reviewed grantlock.json."
+}

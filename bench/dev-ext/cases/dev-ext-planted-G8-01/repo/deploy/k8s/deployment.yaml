@@ -1,0 +1,45 @@
+# billing-concierge — production manifests (namespace agents-prod).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: billing-concierge
+  namespace: agents-prod
+  labels:
+    app: billing-concierge
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: billing-concierge
+  template:
+    metadata:
+      labels:
+        app: billing-concierge
+    spec:
+      serviceAccountName: billing-concierge
+      containers:
+      - name: agent
+        image: ghcr.io/hooli/billing-concierge:1.1.7
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        - name: MODEL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: agent-config
+              key: model
+        resources:
+          limits:
+            memory: 1Gi

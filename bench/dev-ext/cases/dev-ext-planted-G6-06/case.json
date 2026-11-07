@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G6-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_sa_key",
+  "planted": [
+    {
+      "class": "G6",
+      "file": "infra/iam.tf",
+      "component": "google_service_account_key.runtime",
+      "note": "long-lived SA key although WIF exists"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of triage-agent with one planted G6 risk on top of a reviewed grantlock.json."
+}

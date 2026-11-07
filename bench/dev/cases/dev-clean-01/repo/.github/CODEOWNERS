@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @umbrella/platform
+/.vscode/                @umbrella/agents
+/.env.example            @umbrella/agents
+/src/                    @umbrella/agents

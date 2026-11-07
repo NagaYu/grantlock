@@ -1,0 +1,40 @@
+# qa-pilot — production manifests (namespace agents-prod).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qa-pilot
+  namespace: agents-prod
+  labels:
+    app: qa-pilot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: qa-pilot
+  template:
+    metadata:
+      labels:
+        app: qa-pilot
+    spec:
+      serviceAccountName: qa-pilot
+      containers:
+      - name: agent
+        image: ghcr.io/hooli/qa-pilot:4.20.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        resources:
+          limits:
+            memory: 1Gi

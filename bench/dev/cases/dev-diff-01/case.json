@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-diff-01",
+  "split": "dev",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "dp_benign_text",
+  "planted": [],
+  "expected_labels": [],
+  "description": "Before/after pair for triage-agent; after/grantlock.json is the lock committed for before/."
+}

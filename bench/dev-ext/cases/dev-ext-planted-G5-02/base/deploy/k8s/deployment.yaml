@@ -1,0 +1,40 @@
+# sales-ops-agent の本番マニフェスト（namespace agents）。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sales-ops-agent
+  namespace: agents
+  labels:
+    app: sales-ops-agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sales-ops-agent
+  template:
+    metadata:
+      labels:
+        app: sales-ops-agent
+    spec:
+      serviceAccountName: sales-ops-agent
+      containers:
+      - name: agent
+        image: ghcr.io/globex/sales-ops-agent:2.1.4
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        resources:
+          limits:
+            memory: 1Gi

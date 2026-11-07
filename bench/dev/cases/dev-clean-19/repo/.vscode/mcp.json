@@ -1,0 +1,48 @@
+// MCP servers for the billing-concierge workspace
+{
+  "inputs": [],
+  "servers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues",
+        "GITHUB_HOST": "https://github.com",
+        "TOKEN_CACHE_DIR": "./.cache/tokens"
+      }
+    },
+    "brave-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${env:BRAVE_API_KEY}",
+        "HTTPS_PROXY": "http://proxy.internal:3128"
+      }
+    },
+    "tavily": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "tavily-mcp@0.2.4"
+      ],
+      "env": {
+        "TAVILY_API_KEY": "${env:TAVILY_API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G7-05",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g7_notify_job",
+  "planted": [
+    {
+      "class": "G7",
+      "file": ".github/workflows/ci.yml",
+      "component": "CI/notify",
+      "note": "new notify job with webhook secret"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of billing-concierge with one planted G7 risk on top of a reviewed grantlock.json."
+}

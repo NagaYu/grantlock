@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G7-01",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "c_new_service",
+  "planted": [
+    {
+      "class": "G7",
+      "file": "compose.yaml",
+      "component": "search",
+      "note": "new service with a new credential"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of docs-assistant with one planted G7 risk on top of a reviewed grantlock.json."
+}

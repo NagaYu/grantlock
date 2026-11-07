@@ -1,0 +1,505 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.manifest",
+  "split": "dev",
+  "seed": 20261107,
+  "counts": {
+    "planted": 80,
+    "clean": 24,
+    "diff_pair": 16,
+    "total": 120,
+    "planted_by_class": {
+      "G1": 10,
+      "G2": 10,
+      "G3": 10,
+      "G4": 10,
+      "G5": 10,
+      "G6": 10,
+      "G7": 10,
+      "G8": 10
+    }
+  },
+  "cases": [
+    {
+      "case_id": "dev-planted-G1-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G1-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G2-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G3-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G4-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G5-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G6-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G7-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-01",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-02",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-03",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-04",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-05",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-06",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-07",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-08",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-09",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-planted-G8-10",
+      "kind": "planted"
+    },
+    {
+      "case_id": "dev-clean-01",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-02",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-03",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-04",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-05",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-06",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-07",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-08",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-09",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-10",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-11",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-12",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-13",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-14",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-15",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-16",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-17",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-18",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-19",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-20",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-21",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-22",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-23",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-clean-24",
+      "kind": "clean"
+    },
+    {
+      "case_id": "dev-diff-01",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-02",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-03",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-04",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-05",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-06",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-07",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-08",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-09",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-10",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-11",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-12",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-13",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-14",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-15",
+      "kind": "diff_pair"
+    },
+    {
+      "case_id": "dev-diff-16",
+      "kind": "diff_pair"
+    }
+  ],
+  "corpus_sha256": "806d821b43fe1813f21d0c7dded45e2b5871b50426a012fd791dbf5627aeae76"
+}

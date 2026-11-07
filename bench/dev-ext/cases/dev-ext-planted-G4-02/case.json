@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G4-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "c_explicit_unowned",
+  "planted": [
+    {
+      "class": "G4",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "trailing ownerless rule for compose.yaml"
+    }
+  ],
+  "expected_labels": [],
+  "description": "support-copilot のスナップショット。レビュー済み grantlock.json の上に G4 のリスクを仕込んである。"
+}

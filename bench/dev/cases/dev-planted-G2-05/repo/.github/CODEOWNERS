@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @wayne-ent/platform
+/.cursor/                @wayne-ent/ai-platform
+/.env.example            @wayne-ent/ai-platform
+/src/                    @wayne-ent/ai-platform

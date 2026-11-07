@@ -1,0 +1,56 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_TOOLSETS": "repos,issues"
+      }
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "${NOTION_TOKEN}",
+        "HTTPS_PROXY": "http://proxy.internal:3128"
+      }
+    },
+    "slack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+        "SLACK_TEAM_ID": "T0OCRLR6SM",
+        "SLACK_CHANNEL_IDS": "C0OCRLR6SM"
+      }
+    },
+    "datadog": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@winor30/mcp-server-datadog"
+      ],
+      "env": {
+        "DATADOG_API_KEY": "${DATADOG_API_KEY}",
+        "DATADOG_APP_KEY": "${DATADOG_APP_KEY}",
+        "DATADOG_SITE": "datadoghq.com"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @acme/platform
+/.vscode/                @acme/ai-platform
+/.env.example            @acme/ai-platform
+/src/                    @acme/ai-platform

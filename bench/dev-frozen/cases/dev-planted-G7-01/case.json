@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-planted-G7-01",
+  "split": "dev",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "g7_new_server_env",
+  "planted": [
+    {
+      "class": "G7",
+      "file": ".vscode/mcp.json",
+      "component": "datadog",
+      "note": "new observability server"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of docs-assistant with one planted G7 risk on top of a reviewed grantlock.json."
+}

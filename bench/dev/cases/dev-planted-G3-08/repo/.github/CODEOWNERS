@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @stark-labs/platform
+/.cursor/                @stark-labs/ai-platform
+/.env.example            @stark-labs/ai-platform
+/src/                    @stark-labs/ai-platform

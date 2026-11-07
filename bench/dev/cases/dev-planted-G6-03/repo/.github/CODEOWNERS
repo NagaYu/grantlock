@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @stark-labs/platform
+/.mcp.json               @stark-labs/ml-infra
+/.env.example            @stark-labs/ml-infra
+/src/                    @stark-labs/ml-infra

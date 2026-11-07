@@ -1,0 +1,5 @@
+# コードオーナー: エージェントの認証情報と CI は担当チームのレビュー必須。
+/.github/                @hooli/platform
+/.vscode/                @hooli/ml-infra
+/.env.example            @hooli/ml-infra
+/src/                    @hooli/ml-infra

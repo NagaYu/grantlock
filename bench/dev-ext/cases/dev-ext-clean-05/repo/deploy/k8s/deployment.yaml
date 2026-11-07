@@ -1,0 +1,45 @@
+# triage-agent の本番マニフェスト（namespace agents）。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triage-agent
+  namespace: agents
+  labels:
+    app: triage-agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: triage-agent
+  template:
+    metadata:
+      labels:
+        app: triage-agent
+    spec:
+      serviceAccountName: triage-agent
+      containers:
+      - name: agent
+        image: ghcr.io/tyrell/triage-agent:4.11.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: info
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-keys
+              key: ANTHROPIC_API_KEY
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: slack-bot
+              key: token
+        - name: MODEL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: agent-config
+              key: model
+        resources:
+          limits:
+            memory: 1Gi

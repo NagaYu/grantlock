@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G7-06",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "t_new_gcp_sa",
+  "planted": [
+    {
+      "class": "G7",
+      "file": "infra/iam.tf",
+      "component": "google_service_account.exporter",
+      "note": "new service account"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of billing-concierge with one planted G7 risk on top of a reviewed grantlock.json."
+}

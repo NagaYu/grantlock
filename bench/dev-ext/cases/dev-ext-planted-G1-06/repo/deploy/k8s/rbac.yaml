@@ -1,0 +1,43 @@
+# support-copilot — production manifests (namespace ai-prod).
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: support-copilot-reader
+  namespace: ai-prod
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - secrets
+  resourceNames:
+  - llm-keys
+  verbs:
+  - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: support-copilot-reader
+  namespace: ai-prod
+subjects:
+- kind: ServiceAccount
+  name: support-copilot
+  namespace: ai-prod
+roleRef:
+  kind: Role
+  name: support-copilot-reader
+  apiGroup: rbac.authorization.k8s.io

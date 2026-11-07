@@ -1,0 +1,19 @@
+# sales-ops-agent の本番マニフェスト（namespace ai-prod）。
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: sales-ops-agent-digest
+  namespace: ai-prod
+spec:
+  schedule: 0 6 * * 1-5
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: sales-ops-agent
+          restartPolicy: OnFailure
+          containers:
+          - name: digest
+            image: ghcr.io/hooli/sales-ops-agent:4.0.2
+            args:
+            - digest

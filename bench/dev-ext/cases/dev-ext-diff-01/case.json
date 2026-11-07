@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-01",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "en",
+  "variant": "d_rename_service",
+  "planted": [],
+  "expected_labels": [],
+  "description": "Before/after pair for release-helper; after/grantlock.json is the lock committed for before/."
+}

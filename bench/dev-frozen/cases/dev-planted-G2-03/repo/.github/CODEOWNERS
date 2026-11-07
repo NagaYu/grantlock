@@ -1,0 +1,5 @@
+# Code owners: agent credentials and CI must be reviewed by the owning team.
+/.github/                @umbrella/platform
+/.mcp.json               @umbrella/devex
+/.env.example            @umbrella/devex
+/src/                    @umbrella/devex

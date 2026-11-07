@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G4-04",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "en",
+  "variant": "k_typo",
+  "planted": [
+    {
+      "class": "G4",
+      "file": "deploy/k8s/serviceaccount.yaml",
+      "component": "triage-agent",
+      "note": "typo in CODEOWNERS path"
+    }
+  ],
+  "expected_labels": [],
+  "description": "Snapshot of triage-agent with one planted G4 risk on top of a reviewed grantlock.json."
+}

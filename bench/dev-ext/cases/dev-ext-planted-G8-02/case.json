@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-planted-G8-02",
+  "split": "dev-ext",
+  "kind": "planted",
+  "lang": "ja",
+  "variant": "c_drop_service",
+  "planted": [
+    {
+      "class": "G8",
+      "file": "compose.yaml",
+      "component": "worker",
+      "note": "worker service removed"
+    }
+  ],
+  "expected_labels": [],
+  "description": "onboarding-buddy のスナップショット。レビュー済み grantlock.json の上に G8 のリスクを仕込んである。"
+}

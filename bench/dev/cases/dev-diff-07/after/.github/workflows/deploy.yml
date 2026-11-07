@@ -1,0 +1,30 @@
+# Deploys data-analyst-agent using short-lived OIDC credentials (no stored cloud keys).
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+    - name: Configure cloud credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-northeast-1
+    - name: Deploy
+      run: aws ecs update-service --cluster data-analyst-agent --service api --force-new-deployment

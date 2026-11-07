@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "document": "grantbench.case",
+  "case_id": "dev-ext-diff-02",
+  "split": "dev-ext",
+  "kind": "diff_pair",
+  "lang": "ja",
+  "variant": "d_role_reduce",
+  "planted": [],
+  "expected_labels": [],
+  "description": "triage-agent の変更前後ペア。after/grantlock.json は before/ のときにコミットされたロック。"
+}
